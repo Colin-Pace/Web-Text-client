@@ -1,0 +1,25 @@
+.accountPageStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tableTopLink {
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+}
+.tableTopLink:visited {
+  color: black;
+}
+.tableTopLink:hover {
+  text-decoration: underline;
+}
+
+.nameInput {
+  margin-left: 5px;
+}
+
+.passwordInput {
+  margin-left: 5px;
+}

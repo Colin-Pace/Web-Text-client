@@ -1,0 +1,23 @@
+.registrationPageStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landingLink {
+  text-decoration: none;
+}
+.landingLink:hover {
+  text-decoration: underline;
+}
+.landingLink:visited {
+  color: black;
+}
+
+.nameInput {
+  margin-left: 5px;
+}
+
+.passwordInput {
+  margin-left: 5px;
+}

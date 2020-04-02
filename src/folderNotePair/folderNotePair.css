@@ -1,0 +1,42 @@
+.notes {
+  text-decoration: none;
+  text-indent: 20px;
+}
+
+.notes:link {
+  color: gray;
+}
+
+.notes:visited {
+  color: black;
+}
+
+.folderMenu {
+  text-decoration: none;
+}
+
+.folderName  {
+  text-decoration: none;
+}
+
+.folderName:visited {
+  color: black;
+}
+
+.folderName:link {
+  color: black;
+}
+
+.folderAndNotes {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.listStyle {
+  list-style-type: square;
+}
+
+.note {
+  color: gray;
+}

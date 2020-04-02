@@ -1,0 +1,86 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.accountLink {
+  display: inline;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.accountLink:hover {
+  text-decoration: underline;
+}
+
+.logOutButton {
+  width: 60px;
+  height: 22px;
+  display: inline;
+}
+
+.buttonToHide {
+  display: none
+}
+
+.noteView, .noteTextView {
+  text-decoration: none;
+}
+.noteView:link, .noteTextView:link {
+  color: black;
+}
+.noteView:visited, .noteTextView:visited {
+  color: black;
+}
+
+.noteDelete {
+  text-decoration: none;
+  color: black;
+  float: right;
+}
+.noteDelete:visited {
+  color: black;
+}
+.noteDelete:hover {
+  text-decoration: underline;
+}
+
+.accountLink:visited {
+  color: black;
+}
+
+.noteInput {
+  word-break: break-word;
+  width: 500px;
+  height: 350px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: 4px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  resize: none;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.noteDisplayed {
+  width: 450px;
+}
+
+.container {
+  display: table;
+  width: 100%;
+}
+
+.sidebar {
+  display: table-cell;
+  width: 30%;
+  vertical-align: text-top;
+}
+.textview {
+  display: table-cell;
+  width: 70%;
+  vertical-align: text-top;
+}
