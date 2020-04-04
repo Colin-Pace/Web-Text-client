@@ -14,7 +14,6 @@ import './App.css';
 
 
 const baseURL = 'http://localhost:8000';
-//const baseURL = 'https://guarded-castle-39771.herokuapp.com';
 
 
 class App extends React.Component {
@@ -29,7 +28,7 @@ class App extends React.Component {
 
       password: undefined,
 
-      authToken: true,
+      authToken: undefined,
 
       accountDeleted: false,
 
@@ -101,8 +100,6 @@ class App extends React.Component {
   handleLogin(data) {
 
     let authToken = this.makeBasicAuthToken(data[0], data[1]);
-
-    console.log(authToken);
 
     let url = `${baseURL}/login`;
 
@@ -242,6 +239,8 @@ class App extends React.Component {
       body: JSON.stringify(postBody),
 
       headers: {
+
+        "Authorization": this.state.authToken,
 
         "Content-Type": "application/json"
 
@@ -764,8 +763,6 @@ class App extends React.Component {
 
 
   render() {
-
-    console.log(this.state)
 
     if (this.state.authToken === undefined) {
 
