@@ -28,7 +28,7 @@ export default class TableTop extends React.Component {
 
       noteNameIDToEdit: null,
 
-      value: "",
+      value: ""
     }
 
     this.editFolder = this.editFolder.bind(this);
@@ -64,7 +64,6 @@ export default class TableTop extends React.Component {
     this.props.listenForTableTopReady();
 
   }
-
 
   handleChange(e) {
 
