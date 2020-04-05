@@ -49,11 +49,10 @@ export default class Account extends React.Component {
           </Link>
         </div>
 
+        <h1>Account</h1>
+
         <div className = "accountPageStyle">
 
-          <h1>Account</h1>
-
-          <br/>
           <br/>
 
           <p>Enter your username and password to delete your account</p>
@@ -66,7 +65,7 @@ export default class Account extends React.Component {
 
               <input
                     type = "text"
-                    placeholder = 'veganFood1'
+                    placeholder = 'User Name'
                     name = 'nameToAdd'
                     className = "nameInput"
               />
@@ -94,7 +93,7 @@ export default class Account extends React.Component {
             <br/>
             <br/>
 
-            <button type = 'submit'>Submit name and password</button>
+            <button type = 'submit'>Enter</button>
 
           </form>
 

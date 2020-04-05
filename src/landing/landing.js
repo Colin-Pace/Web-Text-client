@@ -42,71 +42,88 @@ export default class Landing extends React.Component {
 
     return (
 
-      <div >
+      <div>
 
         <div className = "header">
+
           <Link to = '/registration' className = 'registration'>
 
             Registration
 
           </Link>
+
         </div>
 
-        <div className = "entryPageStyle">
-
+        <div className = "page">
           <h1>Login</h1>
 
-          <div className = "instructions">
-            <p>If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make notes for them, select notes, and enter note text. If you do not have an account, please go to registration to create one.</p>
+          <div className = "entryPageStyle">
+
+            <div className = "instructions">
+              <p>Application instructions: If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make notes for them, select notes, and enter note text. If you do not have an account, please go to registration to create one.</p>
+            </div>
+
+            <form onSubmit = { this.onSubmitForm } >
+
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
+              <div className = "labelsInputsButton">
+
+                <div className = "labelsInputs">
+
+                  <div className = "labelInputOne">
+
+                    <label className = "labelOne">
+
+                      Name:
+
+                    </label>
+
+                    <input
+                              type = "text"
+                              placeholder = 'User Name'
+                              name = 'nameToAdd'
+                              className = "inputOne"
+                    />
+
+                  </div>
+
+                  <br/>
+
+                  <div className = "labelInputTwo">
+
+
+                    <label>
+
+                      Password:
+
+                    </label>
+
+                    <input
+                            type = "text"
+                            placeholder = 'Secret123!@#'
+                            name = 'pwToAdd'
+                            className = "inputTwo"
+                    />
+
+                  </div>
+                </div>
+
+
+                <div className = "button">
+
+                  <button type = 'submit'>Enter</button>
+
+                </div>
+
+              </div>
+
+            </form>
+
           </div>
-
-          <form onSubmit = { this.onSubmitForm } >
-
-          <br/>
-          <br/>
-
-            <label>
-
-              Name:
-
-              <input
-                        type = "text"
-                        placeholder = 'veganFood'
-                        name = 'nameToAdd'
-                        className = "nameInput"
-              />
-
-            </label>
-
-            <br/>
-            <br/>
-
-            <label>
-
-              Password:
-
-              <input
-                      type = "text"
-                      placeholder = 'Secret123!@#'
-                      name = 'pwToAdd'
-                      className = "passwordInput"
-              />
-
-            </label>
-
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
-            <button type = 'submit'>Submit name and password</button>
-
-          </form>
-
-          <br/>
-          <br/>
-          <br/>
-
         </div>
       </div>
 

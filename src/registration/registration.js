@@ -70,7 +70,7 @@ export default class Registration extends React.Component {
 
               <input
                       type = "text"
-                      placeholder = 'veganFood'
+                      placeholder = 'User Name'
                       name = 'nameToAdd'
                       className = "nameInput"
               />
@@ -98,7 +98,7 @@ export default class Registration extends React.Component {
             <br/>
             <br/>
 
-            <button type = 'submit'>Submit name and password</button>
+            <button type = 'submit'>Enter</button>
 
           </form>
 
