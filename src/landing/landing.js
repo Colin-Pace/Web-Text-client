@@ -60,7 +60,7 @@ export default class Landing extends React.Component {
           <div className = "entryPageStyle">
 
             <div className = "instructions">
-              <p>Application instructions: If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make notes for them, select notes, and enter note text. If you do not have an account, please go to registration to create one.</p>
+              <p>Application instructions: If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make posts for them, select posts, and enter post text. If you do not have an account, please go to registration to create one.</p>
             </div>
 
             <form onSubmit = { this.onSubmitForm } >
