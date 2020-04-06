@@ -1,12 +1,64 @@
-
-.entryPageStyle {
+.login   {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  font-size: 200%;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-bottom: 2px solid lightgray;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+form {
+  width: 600px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  color: gray;
+  border: 2px solid gray;
+  border-color: lightgray;
+  font-size: 80%;
+  margin-right: 10px;
+}
+
+input {
+  width: 160%;
+  box-sizing: border-box;
+  border-width: medium;
+  border-color: lightgray;
+  border-style: solid;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 10px
+}
+
+input::placeholder {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: gray;
+  font-size: 20px;
 }
 
 .registration {
   text-decoration: none;
+  padding-top: 10px;
+  margin-right: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.regText {
+  color: gray;
 }
 
 .registration:hover {
@@ -21,28 +73,7 @@ h1 {
   font-size: 500%;
   color: rgb(31, 46, 44);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.header {
-  display: flex;
-  align-items: flex-end;
-  margin-top: 20px;
-  margin-right: 40px;
-  font-size: 200%;
-}
-
-.passwordInput {
-  margin-left: 5px;
-}
-
-button {
-  width: 150px;
-  height: 115px;
-  background-color: white;
-  color: black;
-  border: 2px solid gray;
-  font-size: 150%;
-  margin-right: 70px;
+  margin-top: 100px;
 }
 
 .instructions {
@@ -56,54 +87,8 @@ button {
   font-size: 150%;
 }
 
-form {
-  width: 700px;
-}
-
-.labelsInputsButton {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  margin-bottom: 100px;
-}
-
-.labelsInputs {
+.text {
   display: flex;
   flex-direction: column;
-  margin-right: 70px;
-}
-
-input {
-  width: 100%;
-  box-sizing: border-box;
-  border-width: medium;
-  border-color: lightgray;
-  border-style: solid;
-  color: black;
-  font-size: 20px;
-  padding: 10px;
-}
-
-input::placeholder {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  color: gray;
-  font-size: 20px;
-}
-
-label {
-  font-family: Arial, Helvetica, sans-serif;
-  padding-left: 70px;
-  margin-top: 5px;
-  font-size: 30px;
-  margin-right: 10px;
-}
-
-.labelInputOne, .labelInputTwo {
-  display: flex;
-  flex-direction: row;
-}
-
-.labelOne {
-  margin-right: 61px;
+  align-items: center;
 }

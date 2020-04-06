@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 
 
 
-
-
 export default class Landing extends React.Component {
 
   constructor(props) {
@@ -44,87 +42,58 @@ export default class Landing extends React.Component {
 
       <div>
 
-        <div className = "header">
+        <div className = "login">
+
+          <form onSubmit = { this.onSubmitForm } >
+
+            <div className = "form">
+
+              <input
+                        type = "text"
+                        placeholder = 'User Name'
+                        name = 'nameToAdd'
+                        className = "inputOne"
+              />
+
+              <input
+                      type = "text"
+                      placeholder = 'Secret123!@#'
+                      name = 'pwToAdd'
+                      className = "inputTwo"
+              />
+
+              <button type = 'submit'>Enter</button>
+
+            </div>
+
+          </form>
+
 
           <Link to = '/registration' className = 'registration'>
 
-            Registration
+            <span className = "regText">Registration</span>
 
           </Link>
+
 
         </div>
 
         <div className = "page">
-          <h1>Login</h1>
 
-          <div className = "entryPageStyle">
+          <div className = "text">
+
+            <h1>Login</h1>
 
             <div className = "instructions">
+
               <p>Application instructions: If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make posts for them, select posts, and enter post text. If you do not have an account, please go to registration to create one.</p>
+
             </div>
 
-            <form onSubmit = { this.onSubmitForm } >
-
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
-              <div className = "labelsInputsButton">
-
-                <div className = "labelsInputs">
-
-                  <div className = "labelInputOne">
-
-                    <label className = "labelOne">
-
-                      Name:
-
-                    </label>
-
-                    <input
-                              type = "text"
-                              placeholder = 'User Name'
-                              name = 'nameToAdd'
-                              className = "inputOne"
-                    />
-
-                  </div>
-
-                  <br/>
-
-                  <div className = "labelInputTwo">
-
-
-                    <label>
-
-                      Password:
-
-                    </label>
-
-                    <input
-                            type = "text"
-                            placeholder = 'Secret123!@#'
-                            name = 'pwToAdd'
-                            className = "inputTwo"
-                    />
-
-                  </div>
-                </div>
-
-
-                <div className = "button">
-
-                  <button type = 'submit'>Enter</button>
-
-                </div>
-
-              </div>
-
-            </form>
-
           </div>
+
         </div>
+
       </div>
 
     );
