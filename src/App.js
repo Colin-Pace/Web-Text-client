@@ -29,7 +29,7 @@ class App extends React.Component {
 
       password: undefined,
 
-      authToken: /*undefined*/ "Q29saW4gUGFjZTpjb2xpbnBhY2UxMjMh",
+      authToken: undefined,
 
       accountDeleted: false,
 
@@ -155,9 +155,6 @@ class App extends React.Component {
   }
 
 
-
-
-
   handleLogout() {
 
     this.setState({
@@ -166,9 +163,6 @@ class App extends React.Component {
 
     });
   }
-
-
-
 
 
   handleRegistration(data) {
@@ -220,9 +214,6 @@ class App extends React.Component {
         });
       })
   }
-
-
-
 
 
   handleCreateFolder(data) {
@@ -279,9 +270,6 @@ class App extends React.Component {
   }
 
 
-
-
-
   handleEditFolder(newFolderName, folderID) {
 
     let postBody = {newFolderName, folderID};
@@ -334,9 +322,6 @@ class App extends React.Component {
   }
 
 
-
-
-
   handleDeleteFolder(folderID) {
 
     let postBody = {folderID};
@@ -387,8 +372,6 @@ class App extends React.Component {
 
       })
   }
-
-
 
 
 
@@ -450,9 +433,6 @@ class App extends React.Component {
    }
 
 
-
-
-
   handleViewNote(noteName) {
 
     let url = `${baseURL}/viewNote/${noteName}`;
@@ -499,8 +479,6 @@ class App extends React.Component {
 
       })
   }
-
-
 
 
 
@@ -814,29 +792,29 @@ class App extends React.Component {
 
               <TableTop
 
-                          listenForTableTopReady = { this.handleTableTopReady }
+              listenForTableTopReady = { this.handleTableTopReady }
 
-                          foldersAndNotesToLoad = { this.state.foldersAndNotes }
+              foldersAndNotesToLoad = { this.state.foldersAndNotes }
 
-                          createFolder = { this.handleCreateFolder }
+              createFolder = { this.handleCreateFolder }
 
-                          editFolder = { this.handleEditFolder }
+              editFolder = { this.handleEditFolder }
 
-                          deleteFolder = { this.handleDeleteFolder }
+              deleteFolder = { this.handleDeleteFolder }
 
-                          noteDetail = { this.handleCreateNote }
+              noteDetail = { this.handleCreateNote }
 
-                          viewNote = { this.handleViewNote }
+              viewNote = { this.handleViewNote }
 
-                          noteToView = { this.state.noteToView }
+              noteToView = { this.state.noteToView }
 
-                          editNote = { this.handleEditNote }
+              editNote = { this.handleEditNote }
 
-                          editNoteName = {this.handleEditNoteName }
+              editNoteName = {this.handleEditNoteName }
 
-                          deleteNote = { this.handleDeleteNote }
+              deleteNote = { this.handleDeleteNote }
 
-                          onLogoutClick = { this.handleLogout } />
+              onLogoutClick = { this.handleLogout } />
 
             </Route>
 
