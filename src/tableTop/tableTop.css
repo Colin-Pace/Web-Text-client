@@ -27,8 +27,8 @@
 }
 
 .logOutButton {
-  width: 100px;
-  height: 40px;
+  width: 150px;
+  height: 50px;
   display: inline;
   padding-bottom: 3px;
   margin-bottom: 10px;
@@ -90,45 +90,55 @@
 }
 
 .container {
-  display: table;
-  width: 100%;
-  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 30px 30px 30px;
 }
 
-.sidebar {
-  display: table-cell;
-  width: 40%;
-  vertical-align: text-top;
-}
 
-.folderNameInput {
-  width: 70%;
-}
+@media (min-width: 768px) {
+  .container {
+    display: table;
+    width: 100%;
+    margin-left: 30px;
+  }
 
-.textview {
-  display: table-cell;
-  width: 60%;
-  vertical-align: text-top;
-}
+  .sidebar {
+    display: table-cell;
+    width: 40%;
+    vertical-align: text-top;
+  }
 
-.noteDisplayed {
-  width: 450px;
-}
+  .folderNameInput {
+    width: 70%;
+  }
 
-.postNameLink {
-  width: 50%;
-  vertical-align: text-top;
-}
+  .textview {
+    display: table-cell;
+    width: 60%;
+    vertical-align: text-top;
+  }
 
-.editPostButton {
-  width: 30%;
-}
+  .noteDisplayed {
+    width: 450px;
+  }
 
-.noteEnterButton {
-  width: 30%;
-}
+  .postNameLink {
+    width: 50%;
+    vertical-align: text-top;
+  }
 
-.noteView {
-  font-size: 55px;
-  vertical-align: text-top;
+  .editPostButton {
+    width: 30%;
+  }
+
+  .noteEnterButton {
+    width: 30%;
+  }
+
+  .noteView {
+    font-size: 55px;
+    vertical-align: text-top;
+  }
 }

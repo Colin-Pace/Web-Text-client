@@ -41,24 +41,33 @@ export default class Account extends React.Component {
 
       <div >
 
-        <div className = "navbar" >
+        <div className = "accountNavbar" >
 
-          <form onSubmit = { this.onSubmitForm } >
+          <form
 
-            <div className = "form">
+            onSubmit = { this.onSubmitForm }
+            className = "nonMobileAccountForm"
+
+          >
+
+            <div className = "nonMobileAccountInputs">
 
               <input
-                        type = "text"
-                        placeholder = 'User Name'
-                        name = 'nameToAdd'
-                        className = "inputOne"
+
+                type = "text"
+                placeholder = 'User Name'
+                name = 'nameToAdd'
+                className = "inputOne"
+
               />
 
               <input
-                      type = "text"
-                      placeholder = 'Password123!@#'
-                      name = 'pwToAdd'
-                      className = "inputTwo"
+
+                type = "text"
+                placeholder = 'Password123!@#'
+                name = 'pwToAdd'
+                className = "inputTwo"
+
               />
 
               <button type = 'submit'>Enter</button>
@@ -75,11 +84,44 @@ export default class Account extends React.Component {
 
         </div>
 
-        <div className = "accountPageStyle">
+        <div className = "accountPage">
 
           <h1>Account</h1>
 
           <p className = "accountInstructions">Enter the username and password to delete the account.</p>
+
+          <form
+
+            onSubmit = { this.onSubmitForm }
+            className = "mobileAccountForm"
+
+          >
+
+            <div className = "mobileAccountInputs">
+
+              <input
+
+                type = "text"
+                placeholder = 'User Name'
+                name = 'nameToAdd'
+                className = "inputOne"
+
+              />
+
+              <input
+
+                type = "text"
+                placeholder = 'Password123!@#'
+                name = 'pwToAdd'
+                className = "inputTwo"
+
+              />
+
+              <button type = 'submit'>Enter</button>
+
+            </div>
+
+          </form>
 
         </div>
 

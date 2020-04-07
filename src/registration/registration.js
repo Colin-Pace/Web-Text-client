@@ -8,7 +8,7 @@ import './registration.css';
 
 
 
-
+ 
 export default class Registration extends React.Component {
 
   constructor(props) {
@@ -45,24 +45,33 @@ export default class Registration extends React.Component {
 
       <div >
 
-        <div className = "registrationForm" >
+        <div className = "regNavbar" >
 
-          <form onSubmit = { this.onSubmitForm } >
+          <form
 
-            <div className = "form">
+            onSubmit = { this.onSubmitForm }
+            className = "regNonMobileForm"
+
+          >
+
+            <div className = "regForm">
 
               <input
-                        type = "text"
-                        placeholder = 'User Name'
-                        name = 'nameToAdd'
-                        className = "inputOne"
+
+                type = "text"
+                placeholder = 'User Name'
+                name = 'nameToAdd'
+                className = "inputOne"
+
               />
 
               <input
-                      type = "text"
-                      placeholder = 'Password123!@#'
-                      name = 'pwToAdd'
-                      className = "inputTwo"
+
+                type = "text"
+                placeholder = 'Password123!@#'
+                name = 'pwToAdd'
+                className = "inputTwo"
+
               />
 
               <button type = 'submit'>Enter</button>
@@ -84,6 +93,34 @@ export default class Registration extends React.Component {
           <h1>Registration</h1>
 
           <p className = "regInstructions">In order to register, please enter a user name and a password. The password should be longer than eight characters long. Also it must contain one upper case and one lower case character, one number, and a special character.</p>
+
+          <form onSubmit = { this.onSubmitForm } >
+
+            <div className = "regMobileInputs">
+
+              <input
+
+                type = "text"
+                placeholder = 'User Name'
+                name = 'nameToAdd'
+                className = "inputOne"
+
+              />
+
+              <input
+
+                type = "text"
+                placeholder = 'Password123!@#'
+                name = 'pwToAdd'
+                className = "inputTwo"
+
+              />
+
+              <button type = 'submit'>Enter</button>
+
+            </div>
+
+        </form>
 
         </div>
 

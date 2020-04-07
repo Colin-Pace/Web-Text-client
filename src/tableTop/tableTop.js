@@ -437,8 +437,9 @@ export default class TableTop extends React.Component {
 
           <Link
 
-              to = '/account'
-              className = "accountLink"
+            to = '/account'
+            className = "accountLink"
+            
           >
 
             <span className = "linkText">Account</span>
@@ -457,10 +458,11 @@ export default class TableTop extends React.Component {
 
               <input
 
-                  type = "text"
-                  name = "folder"
-                  placeholder = "Enter folder name"
-                  className = "folderNameInput"
+                type = "text"
+                name = "folder"
+                placeholder = "Enter folder name"
+                className = "folderNameInput"
+
               />
 
               <input className = "buttonToHide" type = "submit" value = "Submit"/>

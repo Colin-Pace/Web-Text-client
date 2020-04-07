@@ -29,7 +29,7 @@ class App extends React.Component {
 
       password: undefined,
 
-      authToken: undefined /*"Q29saW4gUGFjZTpjb2xpbnBhY2UxMjMh"*/,
+      authToken: /*undefined*/ "Q29saW4gUGFjZTpjb2xpbnBhY2UxMjMh",
 
       accountDeleted: false,
 

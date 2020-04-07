@@ -9,10 +9,11 @@ input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-.login {
+.loginNavbar {
   text-align: right;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-right: 20px;
+  border-bottom: 2px solid lightgray;
 }
 
 .nonMobileForm {
@@ -102,11 +103,10 @@ input::placeholder {
 
 
 @media (min-width: 768px) {
-  .login   {
+  .loginNavbar  {
     display: flex;
     justify-content: space-between;
     font-size: 200%;
-    padding-top: 10px;
     padding-left: 20px;
     margin-top: 10px;
     border-bottom: 2px solid lightgray;

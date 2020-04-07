@@ -42,7 +42,7 @@ export default class Landing extends React.Component {
 
       <div>
 
-        <div className = "login">
+        <div className = "loginNavbar">
 
           <form
 
