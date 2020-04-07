@@ -3,6 +3,7 @@
   text-decoration: none;
   margin-left: 25px;
 }
+
 .edit:visited {
   color: black;
 }
@@ -11,6 +12,7 @@
   color:black;
   text-decoration: none;
 }
+
 .delete:visited {
   color: black;
 }
@@ -19,6 +21,19 @@
   color:black;
   text-decoration: none;
 }
+
 .create:visited {
   color: black;
+}
+
+.editFolderText {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.deleteFolderText {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.createNoteText {
+  font-family: Arial, Helvetica, sans-serif;
 }

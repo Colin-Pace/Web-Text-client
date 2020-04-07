@@ -29,7 +29,7 @@ class App extends React.Component {
 
       password: undefined,
 
-      authToken: undefined,
+      authToken: undefined /*"Q29saW4gUGFjZTpjb2xpbnBhY2UxMjMh"*/,
 
       accountDeleted: false,
 
@@ -761,34 +761,32 @@ class App extends React.Component {
 
 
 
-
-
   render() {
 
     if (this.state.authToken === undefined) {
 
-        return (
+      return (
 
-          <div className = 'App'>
+        <div className = 'App'>
 
-            <Switch>
+          <Switch>
 
-                <Route path = '/registration' >
+              <Route path = '/registration' >
 
-                  <Registration onAddItems = { this.handleRegistration } />
+                <Registration onAddItems = { this.handleRegistration } />
 
-                </Route>
+              </Route>
 
 
-                <Route >
+              <Route >
 
-                  <Landing onAddItems = { this.handleLogin } />
+                <Landing onAddItems = { this.handleLogin } />
 
-                </Route>
+              </Route>
 
-              </Switch>
+            </Switch>
 
-          </div>
+        </div>
       )
 
     } else {
@@ -800,13 +798,14 @@ class App extends React.Component {
           <Switch>
 
             <Route
-                    exact path = '/account'
 
-                    render = { ({ history }) => {
+              exact path = '/account'
 
-                      return <Account onAddItems = { this.handleAccount } />
+              render = { ({ history }) => {
 
-                              }} >
+                return <Account onAddItems = { this.handleAccount } />
+
+                        }} >
 
             </Route>
 

@@ -41,61 +41,45 @@ export default class Account extends React.Component {
 
       <div >
 
-        <div className = "header" >
-          <Link to = '/tableTop' className = "tableTopLink" >
-
-            Table Top
-
-          </Link>
-        </div>
-
-        <h1>Account</h1>
-
-        <div className = "accountPageStyle">
-
-          <br/>
-
-          <p>Enter your username and password to delete your account</p>
+        <div className = "navbar" >
 
           <form onSubmit = { this.onSubmitForm } >
 
-            <label>
-
-              Name:
+            <div className = "form">
 
               <input
-                    type = "text"
-                    placeholder = 'User Name'
-                    name = 'nameToAdd'
-                    className = "nameInput"
+                        type = "text"
+                        placeholder = 'User Name'
+                        name = 'nameToAdd'
+                        className = "inputOne"
               />
-
-            </label>
-
-            <br/>
-            <br/>
-
-            <label>
-
-              Password:
 
               <input
                       type = "text"
-                      placeholder = 'Secret123!@#'
+                      placeholder = 'Password123!@#'
                       name = 'pwToAdd'
-                      className = "passwordInput"
+                      className = "inputTwo"
               />
 
-            </label>
+              <button type = 'submit'>Enter</button>
 
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
-            <button type = 'submit'>Enter</button>
+            </div>
 
           </form>
+
+          <Link to = '/tableTop' className = "tableTopLink" >
+
+            <span className = "linkText">Table Top</span>
+
+          </Link>
+
+        </div>
+
+        <div className = "accountPageStyle">
+
+          <h1>Account</h1>
+
+          <p className = "accountInstructions">Enter the username and password to delete the account.</p>
 
         </div>
 

@@ -4,22 +4,52 @@
   align-items: center;
 }
 
-.tableTopLink {
+.navbar {
   display: flex;
-  align-items: flex-end;
-  text-decoration: none;
+  justify-content: space-between;
+  font-size: 200%;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-bottom: 2px solid lightgray;
 }
+
+input:-webkit-autofill::first-line {
+  font-size: 20px
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.tableTopLink {
+  text-decoration: none;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
 .tableTopLink:visited {
   color: black;
 }
+
 .tableTopLink:hover {
   text-decoration: underline;
+  text-decoration-color: gray;
 }
 
-.nameInput {
-  margin-left: 5px;
+.linkText {
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.passwordInput {
-  margin-left: 5px;
+.accountInstructions {
+  max-width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  background-color: rgb(2, 127, 181);
+  padding: 30px 30px 30px 30px;
+  border-radius: 25px;
+  font-size: 200%;
 }

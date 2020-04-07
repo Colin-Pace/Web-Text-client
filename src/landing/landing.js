@@ -44,22 +44,31 @@ export default class Landing extends React.Component {
 
         <div className = "login">
 
-          <form onSubmit = { this.onSubmitForm } >
+          <form
+
+            onSubmit = { this.onSubmitForm }
+            className = "nonMobileForm"
+
+          >
 
             <div className = "form">
 
               <input
-                        type = "text"
-                        placeholder = 'User Name'
-                        name = 'nameToAdd'
-                        className = "inputOne"
+
+                type = "text"
+                placeholder = 'User Name'
+                name = 'nameToAdd'
+                className = "inputOne"
+
               />
 
               <input
-                      type = "text"
-                      placeholder = 'Secret123!@#'
-                      name = 'pwToAdd'
-                      className = "inputTwo"
+
+                type = "text"
+                placeholder = 'Password123!@#'
+                name = 'pwToAdd'
+                className = "inputTwo"
+
               />
 
               <button type = 'submit'>Enter</button>
@@ -68,29 +77,59 @@ export default class Landing extends React.Component {
 
           </form>
 
+          <Link
 
-          <Link to = '/registration' className = 'registration'>
+            to = '/registration'
+            className = 'registration'
+
+          >
 
             <span className = "regText">Registration</span>
 
           </Link>
 
-
         </div>
 
         <div className = "page">
 
-          <div className = "text">
+          <h1>Login</h1>
 
-            <h1>Login</h1>
+          <p className = "instructions">Application instructions: If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make posts for them, select posts, and enter post text. If you do not have an account, please go to registration to create one.</p>
 
-            <div className = "instructions">
+          <form
 
-              <p>Application instructions: If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make posts for them, select posts, and enter post text. If you do not have an account, please go to registration to create one.</p>
+            onSubmit = { this.onSubmitForm }
+            className = "mobileLandingForm"
+
+          >
+
+            <div className = "mobileInputs">
+
+              <input
+
+                type = "text"
+                placeholder = 'User Name'
+                name = 'nameToAdd'
+                className = "inputOne"
+
+              />
+
+              <input
+
+                type = "text"
+                placeholder = 'Password123!@#'
+                name = 'pwToAdd'
+                className = "inputTwo"
+
+              />
+
+              <br/>
+
+              <button type = 'submit'>Enter</button>
 
             </div>
 
-          </div>
+          </form>
 
         </div>
 

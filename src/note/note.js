@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './note.css';
 
 
@@ -48,33 +49,39 @@ export default class Note extends React.Component {
       <div>
 
         <form onSubmit = { this.onSubmitForm } >
-          <center>
-            <label>
 
-              <input type = "text" placeholder = 'Weather' name = 'noteName' className = "noteTitle" />
+          <span className = "noteForm">
 
-            </label>
-          </center>
+            <input
 
-          <br/>
-          <br/>
+              type = "text"
+              placeholder = 'Weather'
+              name = 'noteName'
+              className = "noteTitle"
 
-          <label>
+            / >
 
-            <textarea  name = "noteText" placeholder = 'Enter note text here'>
+            <textarea
+
+                name = "noteText"
+                placeholder = 'Enter note text here'
+
+            >
 
             </textarea>
 
-          </label>
+            < input
 
-          <br/>
-          <br/>
+                type = "submit"
+                className = "submit"
+            / >
 
-          < input type = "submit" className = "submit"/ >
+          </span>
 
         </form>
 
       </div>
+
     )
   }
 }

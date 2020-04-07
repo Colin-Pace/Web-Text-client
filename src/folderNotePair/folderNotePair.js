@@ -91,8 +91,6 @@ export default class FolderNotePair extends React.Component {
   }
 
 
-
-
   render() {
 
     let foldersAndNotes = [];
@@ -116,7 +114,7 @@ export default class FolderNotePair extends React.Component {
               {
                   this.state.folderIDToEdit === items[item]['folderID'] ? (
 
-                    <form onSubmit={this.listenEditFolderEnter}>
+                    <form onSubmit = { this.listenEditFolderEnter } >
 
                       <input
 
@@ -124,11 +122,11 @@ export default class FolderNotePair extends React.Component {
 
                         name = "folderEnter"
 
-                        placeholder = {items[item]['folderName']}
+                        placeholder = { items[item]['folderName'] }
 
                       / >
 
-                      <input type="submit" style = {{display: "none"}} / >
+                      <input type="submit" style = { { display: "none" } } / >
 
                     </form>
 
@@ -136,13 +134,13 @@ export default class FolderNotePair extends React.Component {
 
                     < a href = "#"
 
-                      onClick = {this.handleFolderLink}
+                      onClick = { this.handleFolderLink }
 
-                      data-folderID = {items[item]['folderID']}
+                      data-folderID = { items[item]['folderID'] }
 
                       className = "folderName">
 
-                        {items[item]['folderName']}
+                        { items[item]['folderName'] }
 
                     </ a >
                   )
@@ -157,11 +155,11 @@ export default class FolderNotePair extends React.Component {
 
                   < FolderMenu
 
-                    folderID = {items[item]['folderID']} deleteFolder = {this.props.deleteFolder}
+                    folderID = { items[item]['folderID'] } deleteFolder = { this.props.deleteFolder }
 
-                    listenEditFolder = {this.handleEditFolderClick}
+                    listenEditFolder = { this.handleEditFolderClick }
 
-                    createNote = {this.createNote}
+                    createNote = { this.createNote }
 
                   / >
 
@@ -174,6 +172,7 @@ export default class FolderNotePair extends React.Component {
 
               }
               </div>
+
             </li>
 
         )
@@ -192,15 +191,15 @@ export default class FolderNotePair extends React.Component {
 
                       onClick = { this.handleNoteLink }
 
-                      data-noteid = {items[item]['notes'][itr]['noteID']}
+                      data-noteid = { items[item]['notes'][itr]['noteID'] }
 
-                      data-notefolder = {items[item]['notes'][itr]['noteFolder']}
+                      data-notefolder = { items[item]['notes'][itr]['noteFolder'] }
 
                       className = "notes"
 
                     >
 
-                        {items[item]['notes'][itr]['noteName']}
+                        { items[item]['notes'][itr]['noteName'] }
 
                     < / a >
 
@@ -221,7 +220,7 @@ export default class FolderNotePair extends React.Component {
 
         < ul className = "listStyle" >
 
-          {foldersAndNotes}
+          { foldersAndNotes }
 
         < / ul >
 

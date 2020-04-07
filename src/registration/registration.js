@@ -45,64 +45,48 @@ export default class Registration extends React.Component {
 
       <div >
 
-        <div className = "header" >
+        <div className = "registrationForm" >
+
+          <form onSubmit = { this.onSubmitForm } >
+
+            <div className = "form">
+
+              <input
+                        type = "text"
+                        placeholder = 'User Name'
+                        name = 'nameToAdd'
+                        className = "inputOne"
+              />
+
+              <input
+                      type = "text"
+                      placeholder = 'Password123!@#'
+                      name = 'pwToAdd'
+                      className = "inputTwo"
+              />
+
+              <button type = 'submit'>Enter</button>
+
+            </div>
+
+        </form>
 
           <Link to = '/landing' className = 'landingLink'>
 
-            Login
+            <span className = "landLinkText">Login</span>
 
           </Link>
 
         </div>
 
-
-        <div className = "registrationPageStyle">
+        <div className = "regPage">
 
           <h1>Registration</h1>
 
-          <br/><br/>
-
-          <form onSubmit = { this.onSubmitForm } >
-
-            <label>
-
-              Name:
-
-              <input
-                      type = "text"
-                      placeholder = 'User Name'
-                      name = 'nameToAdd'
-                      className = "nameInput"
-              />
-
-            </label>
-
-            <br/>
-            <br/>
-
-            <label>
-
-              Password:
-
-              <input
-                      type = "text"
-                      placeholder='Secret123!@#'
-                      name = 'pwToAdd'
-                      className = "passwordInput"
-              />
-
-            </label>
-
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
-            <button type = 'submit'>Enter</button>
-
-          </form>
+          <p className = "regInstructions">In order to register, please enter a user name and a password. The password should be longer than eight characters long. Also it must contain one upper case and one lower case character, one number, and a special character.</p>
 
         </div>
+
       </div>
     );
   }

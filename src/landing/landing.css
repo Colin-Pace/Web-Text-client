@@ -1,19 +1,60 @@
-.login   {
-  display: flex;
-  justify-content: space-between;
-  font-size: 200%;
-  padding-top: 10px;
-  padding-left: 20px;
-  border-bottom: 2px solid lightgray;
+input:-webkit-autofill::first-line {
+  font-size: 20px
 }
 
-.form {
-  display: flex;
-  flex-direction: row;
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-form {
-  width: 600px;
+.login {
+  text-align: right;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+.nonMobileForm {
+  display: none;
+}
+
+.regText {
+  color: gray;
+  font-size: 30px;
+}
+
+.registration {
+  text-decoration: none;
+}
+
+.registration:hover {
+  text-decoration: underline;
+  text-decoration-color: gray;
+}
+
+.registration:visited {
+  color: black;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 20px 20px 20px;
+}
+
+h1 {
+  font-size: 400%;
+  color: rgb(31, 46, 44);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mobileInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 input {
@@ -21,14 +62,13 @@ input {
 }
 
 button {
-  width: 100px;
+  width: 200px;
   height: 50px;
   background-color: white;
   color: gray;
   border: 2px solid gray;
   border-color: lightgray;
-  font-size: 80%;
-  margin-right: 10px;
+  font-size: 100%;
 }
 
 input {
@@ -50,45 +90,66 @@ input::placeholder {
   font-size: 20px;
 }
 
-.registration {
-  text-decoration: none;
-  padding-top: 10px;
-  margin-right: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.regText {
-  color: gray;
-}
-
-.registration:hover {
-  text-decoration: underline;
-}
-
-.registration:visited {
-  color: black;
-}
-
-h1 {
-  font-size: 500%;
-  color: rgb(31, 46, 44);
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 100px;
-}
-
 .instructions {
   max-width: 60%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   background-color: rgb(2, 127, 181);
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 30px 30px 30px 30px;
   border-radius: 25px;
   font-size: 150%;
 }
 
-.text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+@media (min-width: 768px) {
+  .login   {
+    display: flex;
+    justify-content: space-between;
+    font-size: 200%;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-top: 10px;
+    border-bottom: 2px solid lightgray;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mobileLandingForm {
+    display: none;
+  }
+
+  .nonMobileForm {
+    display: initial;
+  }
+
+  .registration {
+    text-decoration: none;
+    padding-top: 10px;
+    margin-right: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .regText {
+    display: initial;
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 500%;
+  }
+
+  .instructions {
+    font-size: 200%;
+  }
+
+  button {
+    width: 100px;
+    height: 50px;
+    font-size: 80%;
+    margin-right: 10px;
+  }
+
 }

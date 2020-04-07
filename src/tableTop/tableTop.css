@@ -1,34 +1,52 @@
-.header {
+.linkAndLogout {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 200%;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-bottom: 2px solid lightgray;
+}
+
+.linkText {
+  color: gray;
 }
 
 .accountLink {
   display: inline;
   text-decoration: none;
+  padding-top: 5px;
   margin-right: 20px;
 }
+
 .accountLink:hover {
   text-decoration: underline;
+  text-decoration-color: gray;
 }
 
 .logOutButton {
-  width: 60px;
-  height: 22px;
+  width: 100px;
+  height: 40px;
   display: inline;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
 }
 
 .buttonToHide {
-  display: none
+  display: none;
 }
 
 .noteView, .noteTextView {
   text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 .noteView:link, .noteTextView:link {
   color: black;
 }
+
 .noteView:visited, .noteTextView:visited {
   color: black;
 }
@@ -36,11 +54,17 @@
 .noteDelete {
   text-decoration: none;
   color: black;
-  float: right;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.postDeleteLink {
+  margin-top: 30px;
+}
+
 .noteDelete:visited {
   color: black;
 }
+
 .noteDelete:hover {
   text-decoration: underline;
 }
@@ -65,22 +89,46 @@
   text-align: center;
 }
 
-.noteDisplayed {
-  width: 450px;
-}
-
 .container {
   display: table;
   width: 100%;
+  margin-left: 30px;
 }
 
 .sidebar {
   display: table-cell;
-  width: 30%;
+  width: 40%;
   vertical-align: text-top;
 }
+
+.folderNameInput {
+  width: 70%;
+}
+
 .textview {
   display: table-cell;
-  width: 70%;
+  width: 60%;
+  vertical-align: text-top;
+}
+
+.noteDisplayed {
+  width: 450px;
+}
+
+.postNameLink {
+  width: 50%;
+  vertical-align: text-top;
+}
+
+.editPostButton {
+  width: 30%;
+}
+
+.noteEnterButton {
+  width: 30%;
+}
+
+.noteView {
+  font-size: 55px;
   vertical-align: text-top;
 }

@@ -1,23 +1,60 @@
-.registrationPageStyle {
+.registrationForm {
+  display: flex;
+  justify-content: space-between;
+  font-size: 200%;
+  padding-top: 10px;
+  padding-left: 20px;
+  border-bottom: 2px solid lightgray;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+input:-webkit-autofill::first-line {
+  font-size: 20px
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.landingLink {
+  text-decoration: none;
+  margin-right: 20px;
+  padding-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.landingLink:hover {
+  text-decoration: underline;
+  text-decoration-color: gray;
+}
+
+.landingLink:visited {
+  color: black;
+}
+
+.landLinkText {
+  color: gray;
+}
+
+.regPage {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.landingLink {
-  text-decoration: none;
-}
-.landingLink:hover {
-  text-decoration: underline;
-}
-.landingLink:visited {
-  color: black;
-}
-
-.nameInput {
-  margin-left: 5px;
-}
-
-.passwordInput {
-  margin-left: 5px;
+.regInstructions {
+  max-width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  background-color: rgb(2, 127, 181);
+  padding: 30px 30px 30px 30px;
+  border-radius: 25px;
+  font-size: 200%;
 }

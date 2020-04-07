@@ -4,8 +4,6 @@ import './folderMenu.css'
 
 
 
-
-
 export default class FolderMenu extends React.Component {
 
   constructor(props) {
@@ -59,7 +57,9 @@ export default class FolderMenu extends React.Component {
             onClick = { this.listenEditFolder }
             className = "edit"
         >
-          Edit folder
+
+          <span className = "editFolderText">Edit folder</span>
+
         </a>
 
         <span> | </span>
@@ -69,7 +69,9 @@ export default class FolderMenu extends React.Component {
             onClick = { this.listenDeleteFolder }
             className = "delete"
         >
-          Delete folder
+
+          <span className = "deleteFolderText">Delete folder</span>
+
         </a>
 
         <span> | </span>
@@ -79,7 +81,9 @@ export default class FolderMenu extends React.Component {
             onClick = { this.listenCreateNote }
             className = "create"
         >
-          Create note
+
+        <span className = "createNoteText">Create post</span>
+
         </a>
 
       </div>

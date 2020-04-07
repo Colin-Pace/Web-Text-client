@@ -10,8 +10,6 @@ import './tableTop.css';
 
 
 
-
-
 export default class TableTop extends React.Component {
 
   constructor(props) {
@@ -64,6 +62,7 @@ export default class TableTop extends React.Component {
     this.props.listenForTableTopReady();
 
   }
+
 
   handleChange(e) {
 
@@ -149,7 +148,6 @@ export default class TableTop extends React.Component {
 
     }
 
-
     for (let folder in data) {
 
       for (let itr in data[folder][ 'notes' ]) {
@@ -164,7 +162,7 @@ export default class TableTop extends React.Component {
 
                 this.state.noteNameIDToEdit === data[folder][ 'notes' ][itr][ 'noteID' ] ? (
 
-                  <form onSubmit = {this.handleNoteNameLink}>
+                  <form onSubmit = { this.handleNoteNameLink } >
 
                     <input
 
@@ -174,36 +172,36 @@ export default class TableTop extends React.Component {
 
                       placeholder = {data[folder][ 'notes' ][itr][ 'noteName' ]}
 
+                      className = "postNameLink"
+
                     / >
 
-                    <input type = "submit" style = {{ display: "none" }} / >
+                    <input
+
+                        type = "submit"
+                        style = { { display: "none" } }
+
+                    / >
 
                   </form>
 
                 ) : (
 
-                  <div>
-                    <center>
-                    < a href = "#"
+                  < a href = "#"
 
-                      onClick = { this.listenEditNoteName }
+                    onClick = { this.listenEditNoteName }
 
-                      data-noteid = {data[folder][ 'notes' ][itr][ 'noteID' ]}
+                    data-noteid = { data[folder][ 'notes' ][itr][ 'noteID' ] }
 
-                      data-notefolder = {data[folder][ 'notes' ][itr][ 'noteFolder' ]}
+                    data-notefolder = { data[folder][ 'notes' ][itr][ 'noteFolder' ] }
 
-                      className = "noteView"
+                    className = "noteView"
 
-                    >
+                  >
 
-                      {data[folder][ 'notes' ][itr][ 'noteName' ]}
+                    { data[folder][ 'notes' ][itr][ 'noteName' ] }
 
-                    </a>
-                    </center>
-
-                    <br/><br/>
-
-                  </div>
+                  </a>
 
                 )
               }
@@ -220,8 +218,6 @@ export default class TableTop extends React.Component {
 
 
   noteContent() {
-
-    let valueToBe;
 
     let data = this.props.foldersAndNotesToLoad;
 
@@ -241,13 +237,13 @@ export default class TableTop extends React.Component {
 
           noteToLoad.push(
 
-            <p >
+            <p>
 
               {
 
                 this.state.noteIDToEdit === data[folder][ 'notes' ][itr][ 'noteID' ] ? (
 
-                  <form onSubmit = {this.handleNoteTextLink}>
+                  <form onSubmit = { this.handleNoteTextLink } >
 
                     <textarea
 
@@ -255,18 +251,22 @@ export default class TableTop extends React.Component {
 
                       name = "noteEnter"
 
-                      placeholder = {data[folder][ 'notes' ][itr][ 'noteText' ]}
+                      placeholder = { data[folder][ 'notes' ][itr][ 'noteText' ] }
 
-                      value = {this.state.value}
+                      value = { this.state.value }
 
-                      onChange = {this.handleChange}
+                      onChange = { this.handleChange }
 
                     / >
 
                     <br/>
-                    <br/>
 
-                    <input type = "submit"  / >
+                    <input
+
+                      type = "submit"
+                      className = "noteEnterButton"
+
+                    / >
 
                   </form>
 
@@ -278,36 +278,35 @@ export default class TableTop extends React.Component {
 
                       onClick = { this.listenEditNote }
 
-                      data-noteid = {data[folder][ 'notes' ][itr][ 'noteID' ]}
+                      data-noteid = { data[folder][ 'notes' ][itr][ 'noteID' ] }
 
-                      data-notefolder = {data[folder][ 'notes' ][itr][ 'noteFolder' ]}
+                      data-notefolder = { data[folder][ 'notes' ][itr][ 'noteFolder' ] }
 
                       className = "noteTextView"
 
                     >
 
-                      {data[folder][ 'notes' ][itr][ 'noteText' ]}
+                      { data[folder][ 'notes' ][itr][ 'noteText' ] }
 
                     </a>
 
-                    <br/><br/>
+                    <div className = "postDeleteLink">
 
-                    < a href = "#"
+                      < a href = "#"
 
-                      onClick = { this.listenDeleteNote }
+                        onClick = { this.listenDeleteNote }
 
-                      data-noteid = {data[folder][ 'notes' ][itr][ 'noteID' ]}
+                        data-noteid = { data[folder][ 'notes' ][itr][ 'noteID' ] }
 
-                      className = "noteDelete"
+                        className = "noteDelete"
 
-                    >
+                      >
 
-                    <br/>
-                    <br/>
+                      Delete note
 
-                    Delete note
+                      </a>
 
-                    </a>
+                    </div>
 
                   </div>
 
@@ -422,45 +421,51 @@ export default class TableTop extends React.Component {
 
       <div>
 
+        <div className = "linkAndLogout">
 
-        <div className = "header">
+          <button
+
+            type = 'submit'
+
+            onClick = { this.onButtonClick }
+
+            className = "logOutButton"
+
+          >Logout
+
+          </button>
+
           <Link
 
               to = '/account'
               className = "accountLink"
           >
-            Account
+
+            <span className = "linkText">Account</span>
+
           </Link>
 
-          <button
-            type = 'submit'
-            onClick = { this.onButtonClick }
-            className = "logOutButton"
-          >Log out
-          </button>
         </div>
-
 
         <h1 className = "h1">Table Top</h1>
 
-
         <div className = "container">
-        <br/>
+
           <div className = "sidebar">
 
             <form onSubmit = { this.handleSubmit } >
 
-              <label>Enter folder name: </label>
+              <input
 
-              <input type = "text" name = "folder" />
-
-              <br/>
+                  type = "text"
+                  name = "folder"
+                  placeholder = "Enter folder name"
+                  className = "folderNameInput"
+              />
 
               <input className = "buttonToHide" type = "submit" value = "Submit"/>
 
             </form>
-
-
 
             < FolderNotePair
 
@@ -477,11 +482,10 @@ export default class TableTop extends React.Component {
               onNoteClick = { this.onNoteClick }
 
             / >
+
           </div>
 
           <div className = "textview">
-
-            <h2>Post title</h2>
 
             {
 
@@ -490,25 +494,27 @@ export default class TableTop extends React.Component {
               ?
 
                 < Note
+
                   noteDetail = { this.combineFolderIDNoteDetail }
+
                 / >
 
               :
 
-              <div>
-              </div>
+              <span>
+
+              </span>
 
             }
-
-            <br/>
-            <br/>
-
 
             { this.noteName() }
 
             { this.noteContent() }
+
           </div>
+
         </div>
+
       </div>
 
     );
