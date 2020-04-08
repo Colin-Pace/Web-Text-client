@@ -17,6 +17,64 @@ export default class Registration extends React.Component {
 
     this.onSubmitForm = this.onSubmitForm.bind(this);
 
+    this.state = {
+
+      value: '',
+
+      message: []
+
+    };
+
+    this.handleChange = this.handleChange.bind(this);
+
+  }
+
+  handleChange(e) {
+
+    const REGEX_LOWER =/(?=.*[a-z])[\S]+/;
+
+    const needsLower = "The password needs a lower case letter."
+
+    const REGEX_UPPER = /(?=.*[A-Z])[\S]+/;
+
+    const needsUpper = "The password needs an upper case letter."
+
+    const REGEX_NUMBER = /(?=.*[0-9])[\S]+/;
+
+    const needsNumber = "The password needs a number."
+
+    const REGEX_SPECIAL =/(?=.*[!@#\$%\^&])[\S]+/;
+
+    const needsSpecial = "The password needs a special character."
+
+    this.setState( { value: e.target.value } );
+
+    console.log(this.state.value);
+
+    if (!REGEX_LOWER.test(this.state.value) && (!this.state.message.includes(needsLower))) {
+
+      this.state.message.push(needsLower);
+
+    }
+
+    if (!REGEX_UPPER.test(this.state.value) && (!this.state.message.includes(needsUpper))) {
+
+      this.state.message.push(needsUpper);
+
+    }
+
+    if (!REGEX_NUMBER.test(this.state.value) && (!this.state.message.includes(needsNumber))) {
+
+      this.state.message.push(needsNumber);
+
+    }
+
+    if (!REGEX_SPECIAL.test(this.state.value) && (!this.state.message.includes(needsSpecial))) {
+
+      this.state.message.push(needsSpecial);
+
+    }
+
   }
 
 
@@ -77,6 +135,8 @@ export default class Registration extends React.Component {
                 aria-required="true"
                 aria-label="Password for registration"
                 aria-describedby="registrationInstructions"
+                value = { this.state.value }
+                onChange = { this.handleChange }
 
               />
 
@@ -96,6 +156,12 @@ export default class Registration extends React.Component {
             <span className = "landingLinkText">Login</span>
 
           </Link>
+
+        </div>
+
+        <div>
+
+          { this.state.message }
 
         </div>
 
