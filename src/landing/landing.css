@@ -9,24 +9,24 @@ input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-.loginNavbar {
-  text-align: right;
-  margin-top: 10px;
-  border-bottom: 2px solid lightgray;
-}
-
 .nonMobileForm {
   display: none;
 }
 
+.loginNavbar {
+  text-align: right;
+  background-color: blue;
+  height: 40px;
+}
+
 .regText {
-  color: gray;
+  color: white;
   font-size: 30px;
-  padding-right: 20px;
 }
 
 .registration {
   text-decoration: none;
+  margin-right: 30px;
 }
 
 .registration:hover {
@@ -50,15 +50,21 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.instructions {
+  max-width: 60%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  background-color: rgb(2, 127, 181);
+  padding: 30px 30px 30px 30px;
+  border-radius: 25px;
+  font-size: 150%;
+}
+
 .mobileInputs {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-}
-
-input {
-  margin-bottom: 10px;
 }
 
 input {
@@ -70,7 +76,8 @@ input {
   color: black;
   font-size: 20px;
   padding: 10px;
-  margin-right: 10px
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 input::placeholder {
@@ -91,32 +98,8 @@ button {
   margin-bottom: 50px;
 }
 
-.instructions {
-  max-width: 60%;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-  background-color: rgb(2, 127, 181);
-  padding: 30px 30px 30px 30px;
-  border-radius: 25px;
-  font-size: 150%;
-}
-
 
 @media (min-width: 768px) {
-  .loginNavbar  {
-    display: flex;
-    justify-content: space-between;
-    font-size: 200%;
-    padding-left: 20px;
-    margin-top: 10px;
-    border-bottom: 2px solid lightgray;
-  }
-
-  .form {
-    display: flex;
-    flex-direction: row;
-  }
-
   .mobileLandingForm {
     display: none;
   }
@@ -125,31 +108,38 @@ button {
     display: initial;
   }
 
-  .registration {
-    text-decoration: none;
-    padding-top: 10px;
-    margin-right: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+  .loginNavbar  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: blue;
+    height: 80px;
   }
 
-  .regText {
-    display: initial;
-    font-size: 30px;
+  .inputOne, .inputTwo {
+    height: 80%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .registration {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+    margin-top: 30px;
   }
 
   h1 {
-    font-size: 500%;
+    font-size: 400%;
   }
 
   .instructions {
     font-size: 200%;
-  }
-
-  button {
-    width: 100px;
-    height: 50px;
-    font-size: 80%;
-    margin-right: 10px;
   }
 
   #landingLoader {

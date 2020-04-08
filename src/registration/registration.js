@@ -61,7 +61,7 @@ export default class Registration extends React.Component {
                 type = "text"
                 placeholder = 'User Name'
                 name = 'nameToAdd'
-                className = "inputOne"
+                className = "regInputOne"
                 aria-required="true"
                 aria-label="User name for registration"
                 aria-describedby="registrationInstructions"
@@ -73,7 +73,7 @@ export default class Registration extends React.Component {
                 type = "text"
                 placeholder = 'Password123!@#'
                 name = 'pwToAdd'
-                className = "inputTwo"
+                className = "regInputTwo"
                 aria-required="true"
                 aria-label="Password for registration"
                 aria-describedby="registrationInstructions"
@@ -86,9 +86,14 @@ export default class Registration extends React.Component {
 
         </form>
 
-          <Link to = '/landing' className = 'landingLink'>
+          <Link
 
-            <span className = "landLinkText">Login</span>
+            to = '/landing'
+            className = 'landingLink'
+
+          >
+
+            <span className = "landingLinkText">Login</span>
 
           </Link>
 
@@ -96,7 +101,7 @@ export default class Registration extends React.Component {
 
         <div className = "regPage">
 
-          <h1>Registration</h1>
+          <h1 className = "regHeadingOne">Registration</h1>
 
           <p
 
@@ -114,7 +119,7 @@ export default class Registration extends React.Component {
                 type = "text"
                 placeholder = 'User Name'
                 name = 'nameToAdd'
-                className = "inputOne"
+                className = "regInputOne"
                 aria-required="true"
                 aria-label="User name for mobile registration"
                 aria-describedby="registrationInstructions"
@@ -126,7 +131,7 @@ export default class Registration extends React.Component {
                 type = "text"
                 placeholder = 'Password123!@#'
                 name = 'pwToAdd'
-                className = "inputTwo"
+                className = "regInputTwo"
                 aria-required="true"
                 aria-label="Password for mobile registration"
                 aria-describedby="registrationInstructions"

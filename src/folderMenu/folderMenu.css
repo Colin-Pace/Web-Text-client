@@ -28,12 +28,29 @@
 
 .editFolderText {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
 }
 
 .deleteFolderText {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
 }
 
 .createNoteText {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  .editFolderText {
+    font-size: 18px;
+  }
+
+  .deleteFolderText {
+    font-size: 18px;
+  }
+
+  .createNoteText {
+    font-size: 18px;
+  }
 }

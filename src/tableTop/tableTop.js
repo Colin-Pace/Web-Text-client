@@ -411,8 +411,8 @@ export default class TableTop extends React.Component {
     return (
 
       <div>
-
-        <div className = "linkAndLogout">
+ 
+        <div className = "tableTopNavbar">
 
           <button
 
@@ -431,13 +431,13 @@ export default class TableTop extends React.Component {
 
           >
 
-            <span className = "linkText">Account</span>
+            <span className = "accountLinkText">Account</span>
 
           </Link>
 
         </div>
 
-        <h1 className = "h1">Table Top</h1>
+        <h1 className = "tableTopHeading">Table Top</h1>
 
         <div className = "container">
 

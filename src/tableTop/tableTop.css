@@ -1,22 +1,19 @@
-.linkAndLogout {
+.tableTopNavbar {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   justify-content: space-between;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-top: 5px;
-  border-bottom: 2px solid lightgray;
+  background-color: blue;
+  height: 40px;
 }
 
-.linkText {
+.accountLinkText {
+  color: white;
   font-size: 30px;
 }
 
 .accountLink {
-  display: inline;
+  margin-right: 30px;
   text-decoration: none;
-  padding-top: 10px;
-  margin-right: 20px;
 }
 
 .accountLink:hover {
@@ -24,22 +21,32 @@
   text-decoration-color: gray;
 }
 
+.accountLink:visited {
+  color: black;
+}
+
 .logOutButton {
   width: 100px;
-  height: 35px;
-  display: inline;
-  margin-left: 20px;
-  margin-top: 3px;
+  height: 38px;
+  margin-top: 2px;
+  color: white;
+  background-color: teal;
 }
 
 .buttonToHide {
   display: none;
 }
 
+.tableTopHeading {
+  font-size: 400%;
+  color: rgb(31, 46, 44);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
 .noteView, .noteTextView {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
 }
 
 .noteView:link, .noteTextView:link {
@@ -54,7 +61,7 @@
   text-decoration: none;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 12px;
 }
 
 .postDeleteLink {
@@ -69,8 +76,8 @@
   text-decoration: underline;
 }
 
-.accountLink:visited {
-  color: black;
+.noteTextView {
+  font-size: 14px;
 }
 
 .noteInput {
@@ -147,6 +154,14 @@
 
   .noteDisplayed {
     width: 500px;
+  }
+
+  .noteDelete {
+    font-size: 16px;
+  }
+
+  .noteTextView {
+    font-size: 20px;
   }
 
   .postNameLink {

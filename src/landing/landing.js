@@ -4,7 +4,7 @@ import './landing.css';
 
 import { Link } from 'react-router-dom';
 
-
+  
 
 export default class Landing extends React.Component {
 

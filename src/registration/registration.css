@@ -9,22 +9,25 @@ input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-.regNavbar {
-  margin-top: 10px;
-  border-bottom: 2px solid lightgray;
-  text-align: right;
-}
-
 .regNonMobileForm {
   display: none;
 }
 
+.regNavbar {
+  text-align: right;
+  background-color: blue;
+  height: 40px;
+}
+
+.landingLinkText {
+  color: white;
+  font-size: 30px;
+}
+
 .landingLink {
   text-decoration: none;
-  padding-right: 40px;
-  padding-top: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 30px;
+  margin-right: 30px;
 }
 
 .landingLink:hover {
@@ -36,14 +39,16 @@ input:-webkit-autofill:active  {
   color: black;
 }
 
-.landLinkText {
-  color: gray;
-}
-
 .regPage {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.regHO {
+  font-size: 400%;
+  color: rgb(31, 46, 44);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .regInstructions {
@@ -60,32 +65,82 @@ input:-webkit-autofill:active  {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
+}
+
+.regInputOne, .regInputTwo {
+  width: 100%;
+  box-sizing: border-box;
+  border-width: medium;
+  border-color: lightgray;
+  border-style: solid;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.regInputOne:placeholder, .regInputTwo:placeholder {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: gray;
+  font-size: 20px;
 }
 
 .regButton {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  color: gray;
+  border: 2px solid gray;
+  border-color: lightgray;
+  font-size: 100%;
   margin-bottom: 50px;
 }
 
 @media (min-width: 768px) {
+  .regMobileInputs {
+    display: none;
+  }
+
+  .regNonMobileForm {
+    display: initial;
+  }
+
   .regNavbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: blue;
+    height: 80px;
+  }
+
+  .regInputOne, .regInputTwo {
+    height: 80%;
   }
 
   .regForm {
     display: flex;
     flex-direction: row;
+    margin-left: 20px;
+    margin-top: 20px;
   }
 
-  .regNonMobileForm {
-    display: flex;
-    flex-direction: row
-
+  .landingLinkText {
+    color: white;
+    font-size: 30px;
   }
 
-  .regMobileInputs {
-    display: none;
+  .landingLink {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+
+  .regHeadingOne {
+    font-size: 400%;
   }
 
   .regInstructions {

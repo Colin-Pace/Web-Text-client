@@ -46,18 +46,18 @@ export default class Account extends React.Component {
           <form
 
             onSubmit = { this.onSubmitForm }
-            className = "nonMobileAccountForm"
+            className = "nonMobileAccountFormOne"
 
           >
 
-            <div className = "nonMobileAccountInputs">
+            <div className = "nonMobileAccountFormTwo">
 
               <input
 
                 type = "text"
                 placeholder = 'User Name'
                 name = 'nameToAdd'
-                className = "inputOne"
+                className = "accountInputOne"
                 aria-required="true"
                 aria-label="User name for account deletion"
                 aria-describedby="accountInstructions"
@@ -69,7 +69,7 @@ export default class Account extends React.Component {
                 type = "text"
                 placeholder = 'Password123!@#'
                 name = 'pwToAdd'
-                className = "inputTwo"
+                className = "accountInputTwo"
                 aria-required="true"
                 aria-label="Password for account deletion"
                 aria-describedby="accountInstructions"
@@ -84,7 +84,7 @@ export default class Account extends React.Component {
 
           <Link to = '/tableTop' className = "tableTopLink" >
 
-            <span className = "linkText">Table Top</span>
+            <span className = "tableTopLinkText">Table Top</span>
 
           </Link>
 
@@ -92,7 +92,7 @@ export default class Account extends React.Component {
 
         <div className = "accountPage">
 
-          <h1>Account</h1>
+          <h1 className = "accountHeading">Account</h1>
 
           <p
 
