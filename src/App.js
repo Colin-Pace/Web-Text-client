@@ -93,7 +93,7 @@ class App extends React.Component {
 
   makeBasicAuthToken(userName, password) {
 
-    return window.btoa(`${userName}:${password}`)
+    return window.btoa(`${userName}:${password}`);
 
   }
 
@@ -194,30 +194,35 @@ class App extends React.Component {
     };
 
 
-
     fetch(url, options)
 
       .then ( res => {
 
-        if (!res.ok) {
+        if (res.ok) {
 
-          console.log("Error registering user")
+          this.setState({
+
+            registrationMessage: data.registrationMessage,
+
+          });
+
+        } else {
+
+          throw new Error('An error occurred');
 
         }
 
-        return res.json();
-
       })
 
-      .then( data => {
+      .catch( err => {
 
-        this.setState({
+        console.log(err);
 
-          registrationMessage: data.registrationMessage,
+        alert('Invalid registration credentials. Please try again.');
 
-        });
       })
   }
+
 
 
   handleCreateFolder(data) {
@@ -668,8 +673,6 @@ class App extends React.Component {
 
       .then ( res => {
 
-        console.log(res);
-
         if (!res.ok) {
 
           throw new Error('An error occurred');
@@ -702,12 +705,6 @@ class App extends React.Component {
 
       })
   }
-
-
-
-
-
-
 
 
 

@@ -50,7 +50,7 @@ export default class Landing extends React.Component {
 
       const spinner = this.spinner.current;
 
-      spinner.style.display = 'none';
+      if (spinner !== null) spinner.style.display = 'none';
 
     }
 
