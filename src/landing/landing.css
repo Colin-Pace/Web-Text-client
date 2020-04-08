@@ -12,7 +12,6 @@ input:-webkit-autofill:active  {
 .loginNavbar {
   text-align: right;
   margin-top: 10px;
-  padding-right: 20px;
   border-bottom: 2px solid lightgray;
 }
 
@@ -23,6 +22,7 @@ input:-webkit-autofill:active  {
 .regText {
   color: gray;
   font-size: 30px;
+  padding-right: 20px;
 }
 
 .registration {
@@ -61,18 +61,8 @@ input {
   margin-bottom: 10px;
 }
 
-button {
-  width: 200px;
-  height: 50px;
-  background-color: white;
-  color: gray;
-  border: 2px solid gray;
-  border-color: lightgray;
-  font-size: 100%;
-}
-
 input {
-  width: 160%;
+  width: 100%;
   box-sizing: border-box;
   border-width: medium;
   border-color: lightgray;
@@ -88,6 +78,16 @@ input::placeholder {
   padding-bottom: 10px;
   color: gray;
   font-size: 20px;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  color: gray;
+  border: 2px solid gray;
+  border-color: lightgray;
+  font-size: 100%;
 }
 
 .instructions {

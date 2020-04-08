@@ -10,9 +10,7 @@ input:-webkit-autofill:active  {
 }
 
 .regNavbar {
-  font-size: 200%;
-  padding-top: 10px;
-  padding-left: 20px;
+  margin-top: 10px;
   border-bottom: 2px solid lightgray;
   text-align: right;
 }
@@ -23,9 +21,10 @@ input:-webkit-autofill:active  {
 
 .landingLink {
   text-decoration: none;
-  margin-right: 40px;
+  padding-right: 40px;
   padding-top: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
 }
 
 .landingLink:hover {
