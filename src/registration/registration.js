@@ -8,7 +8,7 @@ import './registration.css';
 
 
 
- 
+
 export default class Registration extends React.Component {
 
   constructor(props) {
@@ -62,6 +62,9 @@ export default class Registration extends React.Component {
                 placeholder = 'User Name'
                 name = 'nameToAdd'
                 className = "inputOne"
+                aria-required="true"
+                aria-label="User name for registration"
+                aria-describedby="registrationInstructions"
 
               />
 
@@ -71,6 +74,9 @@ export default class Registration extends React.Component {
                 placeholder = 'Password123!@#'
                 name = 'pwToAdd'
                 className = "inputTwo"
+                aria-required="true"
+                aria-label="Password for registration"
+                aria-describedby="registrationInstructions"
 
               />
 
@@ -92,7 +98,14 @@ export default class Registration extends React.Component {
 
           <h1>Registration</h1>
 
-          <p className = "regInstructions">In order to register, please enter a user name and a password. The password should be longer than eight characters long. Also it must contain one upper case and one lower case character, one number, and a special character.</p>
+          <p
+
+            className = "regInstructions"
+            id = "registrationInstructions"
+
+          >In order to register, please enter a user name and a password. The password should be longer than eight characters long. Also it must contain one upper case and one lower case character, one number, and a special character.</p>
+
+          <div class="regLoader"></div>
 
           <form onSubmit = { this.onSubmitForm } >
 
@@ -104,6 +117,9 @@ export default class Registration extends React.Component {
                 placeholder = 'User Name'
                 name = 'nameToAdd'
                 className = "inputOne"
+                aria-required="true"
+                aria-label="User name for mobile registration"
+                aria-describedby="registrationInstructions"
 
               />
 
@@ -113,6 +129,9 @@ export default class Registration extends React.Component {
                 placeholder = 'Password123!@#'
                 name = 'pwToAdd'
                 className = "inputTwo"
+                aria-required="true"
+                aria-label="Password for mobile registration"
+                aria-describedby="registrationInstructions"
 
               />
 

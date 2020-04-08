@@ -119,10 +119,10 @@ export default class FolderNotePair extends React.Component {
                       <input
 
                         type = "text"
-
                         name = "folderEnter"
-
                         placeholder = { items[item]['folderName'] }
+                        aria-required="true"
+                        aria-label="Edit folder name"
 
                       / >
 
@@ -135,9 +135,7 @@ export default class FolderNotePair extends React.Component {
                     < a href = "#"
 
                       onClick = { this.handleFolderLink }
-
                       data-folderID = { items[item]['folderID'] }
-
                       className = "folderName">
 
                         { items[item]['folderName'] }
@@ -156,9 +154,7 @@ export default class FolderNotePair extends React.Component {
                   < FolderMenu
 
                     folderID = { items[item]['folderID'] } deleteFolder = { this.props.deleteFolder }
-
                     listenEditFolder = { this.handleEditFolderClick }
-
                     createNote = { this.createNote }
 
                   / >
@@ -166,8 +162,8 @@ export default class FolderNotePair extends React.Component {
                 ) :
 
                 (
-                  <p>
-                  </p>
+                  <span>
+                  </span>
                 )
 
               }
@@ -190,11 +186,8 @@ export default class FolderNotePair extends React.Component {
                     < a href = "#"
 
                       onClick = { this.handleNoteLink }
-
                       data-noteid = { items[item]['notes'][itr]['noteID'] }
-
                       data-notefolder = { items[item]['notes'][itr]['noteFolder'] }
-
                       className = "notes"
 
                     >

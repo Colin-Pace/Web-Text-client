@@ -14,6 +14,8 @@ export default class Landing extends React.Component {
 
     this.onSubmitForm = this.onSubmitForm.bind(this);
 
+    this.spinner = React.createRef();
+
   }
 
 
@@ -32,6 +34,10 @@ export default class Landing extends React.Component {
     e.target.pwToAdd.value = '';
 
     this.props.onAddItems(items);
+
+    const spinner = this.spinner.current;
+
+    spinner.style.display = 'initial';
 
   }
 
@@ -59,6 +65,9 @@ export default class Landing extends React.Component {
                 placeholder = 'User Name'
                 name = 'nameToAdd'
                 className = "inputOne"
+                aria-required="true"
+                aria-label="User name for login"
+                aria-describedby="landingInstructions"
 
               />
 
@@ -68,6 +77,9 @@ export default class Landing extends React.Component {
                 placeholder = 'Password123!@#'
                 name = 'pwToAdd'
                 className = "inputTwo"
+                aria-required="true"
+                aria-label="Password for login"
+                aria-describedby="landingInstructions"
 
               />
 
@@ -94,7 +106,19 @@ export default class Landing extends React.Component {
 
           <h1>Login</h1>
 
-          <p className = "instructions">Application instructions: If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make posts for them, select posts, and enter post text. If you do not have an account, please go to registration to create one.</p>
+          <p
+
+            className = "instructions"
+            id = "landingInstructions"
+
+          >Application instructions: If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make posts for them, select posts, and enter post text. If you do not have an account, please go to registration to create one.</p>
+
+          <div
+
+            id = "landingLoader"
+            ref = { this.spinner }
+
+          ></div>
 
           <form
 
@@ -111,6 +135,9 @@ export default class Landing extends React.Component {
                 placeholder = 'User Name'
                 name = 'nameToAdd'
                 className = "inputOne"
+                aria-required="true"
+                aria-label="User name for mobile login"
+                aria-describedby="landingInstructions"
 
               />
 
@@ -120,6 +147,9 @@ export default class Landing extends React.Component {
                 placeholder = 'Password123!@#'
                 name = 'pwToAdd'
                 className = "inputTwo"
+                aria-required="true"
+                aria-label="Password for mobile login"
+                aria-describedby="landingInstructions"
 
               />
 

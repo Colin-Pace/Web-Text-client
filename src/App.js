@@ -25,8 +25,6 @@ class App extends React.Component {
 
     this.state = {
 
-      username: undefined,
-
       password: undefined,
 
       authToken: undefined,
@@ -778,7 +776,6 @@ class App extends React.Component {
             <Route
 
               exact path = '/account'
-
               render = { ({ history }) => {
 
                 return <Account onAddItems = { this.handleAccount } />
@@ -793,27 +790,16 @@ class App extends React.Component {
               <TableTop
 
               listenForTableTopReady = { this.handleTableTopReady }
-
               foldersAndNotesToLoad = { this.state.foldersAndNotes }
-
               createFolder = { this.handleCreateFolder }
-
               editFolder = { this.handleEditFolder }
-
               deleteFolder = { this.handleDeleteFolder }
-
               noteDetail = { this.handleCreateNote }
-
               viewNote = { this.handleViewNote }
-
               noteToView = { this.state.noteToView }
-
               editNote = { this.handleEditNote }
-
               editNoteName = {this.handleEditNoteName }
-
               deleteNote = { this.handleDeleteNote }
-
               onLogoutClick = { this.handleLogout } />
 
             </Route>

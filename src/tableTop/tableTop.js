@@ -156,7 +156,7 @@ export default class TableTop extends React.Component {
 
           noteNameToLoad.push(
 
-            <p>
+            <div>
 
               {
 
@@ -167,18 +167,19 @@ export default class TableTop extends React.Component {
                     <input
 
                       type = "text"
-
                       name = "noteNameEnter"
-
                       placeholder = {data[folder][ 'notes' ][itr][ 'noteName' ]}
-
                       className = "postNameLink"
+                      aria-required="true"
+                      aria-label="Edit post name "
 
                     / >
 
                     <input
 
                         type = "submit"
+                        aria-required="true"
+                        aria-label="Edit post name keyboard enter"
                         style = { { display: "none" } }
 
                     / >
@@ -190,11 +191,8 @@ export default class TableTop extends React.Component {
                   < a href = "#"
 
                     onClick = { this.listenEditNoteName }
-
                     data-noteid = { data[folder][ 'notes' ][itr][ 'noteID' ] }
-
                     data-notefolder = { data[folder][ 'notes' ][itr][ 'noteFolder' ] }
-
                     className = "noteView"
 
                   >
@@ -206,7 +204,7 @@ export default class TableTop extends React.Component {
                 )
               }
 
-            </p>
+            </div>
           )
         }
       }
@@ -248,13 +246,9 @@ export default class TableTop extends React.Component {
                     <textarea
 
                       type = "text"
-
                       name = "noteEnter"
-
                       placeholder = { data[folder][ 'notes' ][itr][ 'noteText' ] }
-
                       value = { this.state.value }
-
                       onChange = { this.handleChange }
 
                     / >
@@ -265,6 +259,8 @@ export default class TableTop extends React.Component {
 
                       type = "submit"
                       className = "noteEnterButton"
+                      aria-required="true"
+                      aria-label="Edit post text"
 
                     / >
 
@@ -277,11 +273,8 @@ export default class TableTop extends React.Component {
                     < a href = "#"
 
                       onClick = { this.listenEditNote }
-
                       data-noteid = { data[folder][ 'notes' ][itr][ 'noteID' ] }
-
                       data-notefolder = { data[folder][ 'notes' ][itr][ 'noteFolder' ] }
-
                       className = "noteTextView"
 
                     >
@@ -295,9 +288,7 @@ export default class TableTop extends React.Component {
                       < a href = "#"
 
                         onClick = { this.listenDeleteNote }
-
                         data-noteid = { data[folder][ 'notes' ][itr][ 'noteID' ] }
-
                         className = "noteDelete"
 
                       >
@@ -426,9 +417,7 @@ export default class TableTop extends React.Component {
           <button
 
             type = 'submit'
-
             onClick = { this.onButtonClick }
-
             className = "logOutButton"
 
           >Logout
@@ -439,7 +428,7 @@ export default class TableTop extends React.Component {
 
             to = '/account'
             className = "accountLink"
-            
+
           >
 
             <span className = "linkText">Account</span>
@@ -462,25 +451,30 @@ export default class TableTop extends React.Component {
                 name = "folder"
                 placeholder = "Enter folder name"
                 className = "folderNameInput"
+                aria-required="true"
+                aria-label="Folder name input"
 
               />
 
-              <input className = "buttonToHide" type = "submit" value = "Submit"/>
+              <input
+
+                className = "buttonToHide"
+                type = "submit"
+                value = "Submit"
+                aria-required="true"
+                aria-label="Folder name input button"
+
+              />
 
             </form>
 
             < FolderNotePair
 
               createNote = { this.createNote }
-
               editFolder = { this.editFolder }
-
               editNote = { this.editNote }
-
               deleteFolder = { this.deleteFolder }
-
               items = { this.props.foldersAndNotesToLoad }
-
               onNoteClick = { this.onNoteClick }
 
             / >
@@ -493,19 +487,13 @@ export default class TableTop extends React.Component {
 
               this.state.folderIDForNoteCreation !== null
 
-              ?
+              &&
 
                 < Note
 
                   noteDetail = { this.combineFolderIDNoteDetail }
 
                 / >
-
-              :
-
-              <span>
-
-              </span>
 
             }
 

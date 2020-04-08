@@ -58,6 +58,8 @@ export default class Note extends React.Component {
               placeholder = 'Weather'
               name = 'noteName'
               className = "noteTitle"
+              aria-required="true"
+              aria-label="Post name input"
 
             / >
 
@@ -74,6 +76,9 @@ export default class Note extends React.Component {
 
                 type = "submit"
                 className = "submit"
+                aria-required="true"
+                aria-label="Post name input button"
+                
             / >
 
           </span>

@@ -58,6 +58,9 @@ export default class Account extends React.Component {
                 placeholder = 'User Name'
                 name = 'nameToAdd'
                 className = "inputOne"
+                aria-required="true"
+                aria-label="User name for account deletion"
+                aria-describedby="accountInstructions"
 
               />
 
@@ -67,6 +70,9 @@ export default class Account extends React.Component {
                 placeholder = 'Password123!@#'
                 name = 'pwToAdd'
                 className = "inputTwo"
+                aria-required="true"
+                aria-label="Password for account deletion"
+                aria-describedby="accountInstructions"
 
               />
 
@@ -88,7 +94,14 @@ export default class Account extends React.Component {
 
           <h1>Account</h1>
 
-          <p className = "accountInstructions">Enter the username and password to delete the account.</p>
+          <p
+
+            className = "accountInstructions"
+            id = "accountInstructions"
+
+          >Enter the username and password to delete the account.</p>
+
+          <div class="accountLoader"></div>
 
           <form
 
@@ -105,6 +118,9 @@ export default class Account extends React.Component {
                 placeholder = 'User Name'
                 name = 'nameToAdd'
                 className = "inputOne"
+                aria-required="true"
+                aria-label="User name for mobile account deletion"
+                aria-describedby="accountInstructions"
 
               />
 
@@ -114,6 +130,9 @@ export default class Account extends React.Component {
                 placeholder = 'Password123!@#'
                 name = 'pwToAdd'
                 className = "inputTwo"
+                aria-required="true"
+                aria-label="Password for mobile account deletion"
+                aria-describedby="accountInstructions"
 
               />
 

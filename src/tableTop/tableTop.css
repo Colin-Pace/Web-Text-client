@@ -115,9 +115,10 @@
   }
 
   .textview {
-    display: table-cell;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 60%;
-    vertical-align: text-top;
   }
 
   .noteDisplayed {
@@ -140,5 +141,6 @@
   .noteView {
     font-size: 55px;
     vertical-align: text-top;
+    margin-left: 40px;
   }
 }
