@@ -168,7 +168,7 @@ export default class TableTop extends React.Component {
 
                       type = "text"
                       name = "noteNameEnter"
-                      placeholder = {data[folder][ 'notes' ][itr][ 'noteName' ]}
+                      placeholder = { data[folder][ 'notes' ][itr][ 'noteName' ] }
                       className = "postNameLink"
                       aria-required="true"
                       aria-label="Edit post name "
@@ -443,7 +443,12 @@ export default class TableTop extends React.Component {
 
           <div className = "sidebar">
 
-            <form onSubmit = { this.handleSubmit } >
+            <form
+
+              onSubmit = { this.handleSubmit }
+              className = "sidebarInput"
+
+            >
 
               <input
 

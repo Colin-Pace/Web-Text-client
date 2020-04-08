@@ -101,7 +101,7 @@ input::placeholder {
 }
 
 
-@media (min-width: 868px) {
+@media (min-width: 768px) {
   .loginNavbar  {
     display: flex;
     justify-content: space-between;

@@ -62,7 +62,7 @@ export default class Note extends React.Component {
               aria-label="Post name input"
 
             / >
-
+ 
             <textarea
 
                 name = "noteText"
@@ -78,7 +78,7 @@ export default class Note extends React.Component {
                 className = "submit"
                 aria-required="true"
                 aria-label="Post name input button"
-                
+
             / >
 
           </span>
