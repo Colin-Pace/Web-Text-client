@@ -133,7 +133,12 @@ export default class Registration extends React.Component {
 
               />
 
-              <button type = 'submit'>Enter</button>
+              <button
+
+                type = 'submit'
+                className = "regButton"
+
+              >Enter</button>
 
             </div>
 

@@ -88,6 +88,7 @@ button {
   border: 2px solid gray;
   border-color: lightgray;
   font-size: 100%;
+  margin-bottom: 50px;
 }
 
 .instructions {

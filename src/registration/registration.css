@@ -62,6 +62,10 @@ input:-webkit-autofill:active  {
   align-items: center;
 }
 
+.regButton {
+  margin-bottom: 50px;
+}
+
 @media (min-width: 768px) {
   .regNavbar {
     display: flex;
