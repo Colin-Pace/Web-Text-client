@@ -16,6 +16,8 @@ export default class Landing extends React.Component {
 
     this.spinner = React.createRef();
 
+    this.unsuccessfulLogin = this.props.unsuccessfulLogin;
+
   }
 
 
@@ -43,6 +45,14 @@ export default class Landing extends React.Component {
 
 
   render() {
+
+    if (this.props.unsuccessfulLogin !== undefined) {
+
+      const spinner = this.spinner.current;
+
+      spinner.style.display = 'none';
+
+    }
 
     return (
 
@@ -104,7 +114,7 @@ export default class Landing extends React.Component {
 
         <div className = "page">
 
-          <h1>Login</h1>
+          <h1>Web Text</h1>
 
           <p
 

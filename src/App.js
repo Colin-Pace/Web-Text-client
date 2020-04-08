@@ -13,8 +13,8 @@ import Account from './account/account.js';
 import './App.css';
 
 
-// const baseURL = 'http://localhost:8000';
-const baseURL = 'https://radiant-thicket-42053.herokuapp.com'
+const baseURL = 'http://localhost:8000';
+//const baseURL = 'https://radiant-thicket-42053.herokuapp.com'
 
 
 class App extends React.Component {
@@ -24,6 +24,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+
+      unsuccessfulLogin: undefined,
 
       password: undefined,
 
@@ -112,7 +114,7 @@ class App extends React.Component {
 
     } else {
 
-      let postBody = {userName, password, authToken};
+      let postBody = { userName, password, authToken };
 
       let options = {
 
@@ -135,17 +137,21 @@ class App extends React.Component {
 
           if (!res.ok) {
 
-            throw new Error( 'An error occurred' );
+            alert('Invalid login credentials. Please try again.');
 
-          };
+            this.setState( { unsuccessfulLogin: true });
 
-          this.setState({
+          } else {
 
-            authToken: authToken,
+            this.setState({
 
-          });
+              authToken: authToken,
 
-          this.props.history.push( "/tableTop" );
+            });
+
+            this.props.history.push( "/tableTop" );
+
+          }
 
         })
 
@@ -662,13 +668,17 @@ class App extends React.Component {
 
       .then ( res => {
 
+        console.log(res);
+
         if (!res.ok) {
 
           throw new Error('An error occurred');
 
-        }
+        } else {
 
-        return res.json();
+          return res.json();
+
+        }
 
       })
 
@@ -685,7 +695,18 @@ class App extends React.Component {
         this.handleLogout();
 
       })
+
+      .catch( err => {
+
+        alert('Invalid login credentials. Please try again.');
+
+      })
   }
+
+
+
+
+
 
 
 
@@ -756,7 +777,12 @@ class App extends React.Component {
 
               <Route >
 
-                <Landing onAddItems = { this.handleLogin } />
+                <Landing
+
+                  onAddItems = { this.handleLogin }
+                  unsuccessfulLogin =  { this.state.unsuccessfulLogin }
+
+                />
 
               </Route>
 
@@ -789,18 +815,18 @@ class App extends React.Component {
 
               <TableTop
 
-              listenForTableTopReady = { this.handleTableTopReady }
-              foldersAndNotesToLoad = { this.state.foldersAndNotes }
-              createFolder = { this.handleCreateFolder }
-              editFolder = { this.handleEditFolder }
-              deleteFolder = { this.handleDeleteFolder }
-              noteDetail = { this.handleCreateNote }
-              viewNote = { this.handleViewNote }
-              noteToView = { this.state.noteToView }
-              editNote = { this.handleEditNote }
-              editNoteName = {this.handleEditNoteName }
-              deleteNote = { this.handleDeleteNote }
-              onLogoutClick = { this.handleLogout } />
+                listenForTableTopReady = { this.handleTableTopReady }
+                foldersAndNotesToLoad = { this.state.foldersAndNotes }
+                createFolder = { this.handleCreateFolder }
+                editFolder = { this.handleEditFolder }
+                deleteFolder = { this.handleDeleteFolder }
+                noteDetail = { this.handleCreateNote }
+                viewNote = { this.handleViewNote }
+                noteToView = { this.state.noteToView }
+                editNote = { this.handleEditNote }
+                editNoteName = {this.handleEditNoteName }
+                deleteNote = { this.handleDeleteNote }
+                onLogoutClick = { this.handleLogout } />
 
             </Route>
 

@@ -105,8 +105,6 @@ export default class Registration extends React.Component {
 
           >In order to register, please enter a user name and a password. The password should be longer than eight characters long. Also it must contain one upper case and one lower case character, one number, and a special character.</p>
 
-          <div class="regLoader"></div>
-
           <form onSubmit = { this.onSubmitForm } >
 
             <div className = "regMobileInputs">

@@ -101,8 +101,6 @@ export default class Account extends React.Component {
 
           >Enter the username and password to delete the account.</p>
 
-          <div class="accountLoader"></div>
-
           <form
 
             onSubmit = { this.onSubmitForm }
