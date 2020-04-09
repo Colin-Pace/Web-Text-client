@@ -43,14 +43,14 @@
 
 @media (min-width: 768px) {
   .editFolderText {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .deleteFolderText {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .createNoteText {
-    font-size: 18px;
+    font-size: 14px;
   }
 }

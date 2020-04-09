@@ -19,7 +19,7 @@
 
 .loginNavbar {
   text-align: right;
-  background-color: blue;
+  background-color: black;
   height: 40px;
 }
 
@@ -50,7 +50,7 @@
 
 h1 {
   font-size: 400%;
-  color: rgb(31, 46, 44);
+  color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -58,10 +58,11 @@ h1 {
   max-width: 60%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
-  background-color: rgb(2, 127, 181);
   padding: 30px 30px 30px 30px;
-  border-radius: 25px;
-  font-size: 150%;
+  font-size: 20px;
+  line-height: 200%;
+  border-style: solid;
+  border-width: 1px;
 }
 
 .mobileInputs {
@@ -74,14 +75,14 @@ h1 {
 .inputOne, .inputTwo {
   width: 100%;
   box-sizing: border-box;
-  border-width: medium;
-  border-color: lightgray;
+  border-width: 1px;
+  border-color: black;
   border-style: solid;
   color: black;
   font-size: 20px;
   padding: 10px;
   margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .inputOne::placeholder, .inputTwo::placeholder {
@@ -93,11 +94,11 @@ h1 {
 
 .landingButton {
   width: 100px;
-  height: 50px;
+  height: 46px;
   background-color: white;
-  color: gray;
-  border: 2px solid gray;
-  border-color: lightgray;
+  color: black;
+  border: 1px solid black;
+  border-color: black;
   font-size: 100%;
   margin-bottom: 50px;
 }
@@ -116,7 +117,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: blue;
+    background-color: black;
     height: 80px;
   }
 
@@ -143,7 +144,10 @@ h1 {
   }
 
   .instructions {
-    font-size: 200%;
+    font-size: 20px;
+    line-height: 200%;
+    border-style: solid;
+    border-width: 1px;
   }
 
   #landingLoader {

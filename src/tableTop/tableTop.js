@@ -170,16 +170,17 @@ export default class TableTop extends React.Component {
                       name = "noteNameEnter"
                       placeholder = { data[folder][ 'notes' ][itr][ 'noteName' ] }
                       className = "postNameLink"
-                      aria-required="true"
-                      aria-label="Edit post name "
+                      aria-required = "true"
+                      aria-label = "Edit post name"
+                      autocomplete = "off"
 
                     / >
 
                     <input
 
                         type = "submit"
-                        aria-required="true"
-                        aria-label="Edit post name keyboard enter"
+                        aria-required = "true"
+                        aria-label = "Edit post name keyboard enter"
                         style = { { display: "none" } }
 
                     / >
@@ -250,6 +251,7 @@ export default class TableTop extends React.Component {
                       placeholder = { data[folder][ 'notes' ][itr][ 'noteText' ] }
                       value = { this.state.value }
                       onChange = { this.handleChange }
+                      className = 'editPostText'
 
                     / >
 
@@ -259,8 +261,8 @@ export default class TableTop extends React.Component {
 
                       type = "submit"
                       className = "noteEnterButton"
-                      aria-required="true"
-                      aria-label="Edit post text"
+                      aria-required = "true"
+                      aria-label = "Edit post text"
 
                     / >
 
@@ -424,6 +426,8 @@ export default class TableTop extends React.Component {
 
           </button>
 
+          <span className = "tableTopTitle">Table Top</span>
+
           <Link
 
             to = '/account'
@@ -436,8 +440,6 @@ export default class TableTop extends React.Component {
           </Link>
 
         </div>
-
-        <h1 className = "tableTopHeading">Table Top</h1>
 
         <div className = "container">
 
@@ -456,8 +458,8 @@ export default class TableTop extends React.Component {
                 name = "folder"
                 placeholder = "Enter folder name"
                 className = "folderNameInput"
-                aria-required="true"
-                aria-label="Folder name input"
+                aria-required = "true"
+                aria-label = "Folder name input"
                 autocomplete = "off"
 
               />
@@ -467,8 +469,8 @@ export default class TableTop extends React.Component {
                 className = "buttonToHide"
                 type = "submit"
                 value = "Submit"
-                aria-required="true"
-                aria-label="Folder name input button"
+                aria-required = "true"
+                aria-label = "Folder name input button"
 
               />
 
@@ -488,6 +490,7 @@ export default class TableTop extends React.Component {
           </div>
 
           <div className = "textview">
+
 
             {
 

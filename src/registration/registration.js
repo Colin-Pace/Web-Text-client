@@ -190,12 +190,6 @@ export default class Registration extends React.Component {
 
         </div>
 
-        <div className = "showMessage" >
-
-          { !hasEnteredPassword || isValidPassword ? "" : this.state.message }
-
-        </div>
-
         <div className = "regPage">
 
           <h1 className = "regHeadingOne">Registration</h1>
@@ -206,6 +200,12 @@ export default class Registration extends React.Component {
             id = "registrationInstructions"
 
           >In order to register, please enter a user name and a password. The password should be longer than eight characters long. Also it must contain one upper case and one lower case character, one number, and a special character.</p>
+
+          <div className = "showMessage" >
+
+            { !hasEnteredPassword || isValidPassword ? "" : this.state.message }
+
+          </div>
 
           <form onSubmit = { this.onSubmitForm } >
 

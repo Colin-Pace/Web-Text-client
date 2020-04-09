@@ -13,8 +13,8 @@ import Account from './account/account.js';
 import './App.css';
 
 
-//const baseURL = 'http://localhost:8000';
-const baseURL = 'https://cryptic-temple-96082.herokuapp.com/'
+const baseURL = 'http://localhost:8000';
+//const baseURL = 'https://cryptic-temple-96082.herokuapp.com/'
 
 
 class App extends React.Component {
