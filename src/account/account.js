@@ -61,6 +61,7 @@ export default class Account extends React.Component {
                 aria-required="true"
                 aria-label="User name for account deletion"
                 aria-describedby="accountInstructions"
+                autocomplete = "off"
 
               />
 
@@ -73,6 +74,7 @@ export default class Account extends React.Component {
                 aria-required="true"
                 aria-label="Password for account deletion"
                 aria-describedby="accountInstructions"
+                autocomplete = "off"
 
               />
 
@@ -119,6 +121,7 @@ export default class Account extends React.Component {
                 aria-required="true"
                 aria-label="User name for mobile account deletion"
                 aria-describedby="accountInstructions"
+                autocomplete = "off"
 
               />
 
@@ -131,6 +134,7 @@ export default class Account extends React.Component {
                 aria-required="true"
                 aria-label="Password for mobile account deletion"
                 aria-describedby="accountInstructions"
+                autocomplete = "off"
 
               />
 

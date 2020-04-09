@@ -215,6 +215,7 @@ export default class Registration extends React.Component {
                 aria-required="true"
                 aria-label="User name for mobile registration"
                 aria-describedby="registrationInstructions"
+                autocomplete = "off"
 
               />
 
@@ -227,6 +228,7 @@ export default class Registration extends React.Component {
                 aria-required="true"
                 aria-label="Password for mobile registration"
                 aria-describedby="registrationInstructions"
+                autocomplete = "off"
 
               />
 
