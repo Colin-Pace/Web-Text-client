@@ -127,12 +127,6 @@ export default class Registration extends React.Component {
 
       <div >
 
-        <div className = "showMessage" >
-
-          { !hasEnteredPassword || isValidPassword ? "" : this.state.message }
-
-        </div>
-
         <div className = "regNavbar" >
 
           <form
@@ -188,6 +182,12 @@ export default class Registration extends React.Component {
             <span className = "landingLinkText">Login</span>
 
           </Link>
+
+        </div>
+
+        <div className = "showMessage" >
+
+          { !hasEnteredPassword || isValidPassword ? "" : this.state.message }
 
         </div>
 

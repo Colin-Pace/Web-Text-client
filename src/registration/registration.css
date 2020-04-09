@@ -10,10 +10,14 @@ input:-webkit-autofill:active  {
 }
 
 input::-webkit-input-placeholder {
-     line-height:normal!important;
+     line-height:1;
 }
 
 .regNonMobileForm {
+  display: none;
+}
+
+.showMessage {
   display: none;
 }
 
@@ -85,7 +89,7 @@ input::-webkit-input-placeholder {
   margin-bottom: 10px;
 }
 
-.regInputOne:placeholder, .regInputTwo:placeholder {
+.regInputOne::placeholder, .regInputTwo::placeholder {
   padding-top: 10px;
   padding-bottom: 10px;
   color: gray;
@@ -138,8 +142,8 @@ input::-webkit-input-placeholder {
   .passwordMessage {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    margin-left: 230px;
     color: red;
+    margin-left: 300px;
   }
 
   .regForm {
@@ -170,10 +174,9 @@ input::-webkit-input-placeholder {
   }
 
   .showMessage {
-    position: fixed;
-    top: 80px;
-    left: -200px;
+    display: initial;
     width: 1000px;
+    width: 100%;
   }
 
 }
