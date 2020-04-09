@@ -1,15 +1,15 @@
-input:-webkit-autofill::first-line {
+.accountInputOne:-webkit-autofill::first-line, .accountInputTwo:-webkit-autofill::first-line {
   font-size: 20px
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active  {
+.accountInputOne:-webkit-autofill, .accountInputTwo:-webkit-autofill,
+.accountInputOne:-webkit-autofill:hover, .accountInputTwo:-webkit-autofill:hover,
+.accountInputOne:-webkit-autofill:focus, .accountInputTwo:-webkit-autofill:focus,
+.accountInputOne:-webkit-autofill:active, .accountInputTwo:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-input::-webkit-input-placeholder {
+.accountInputOne::-webkit-input-placeholder, .accountInputTwo::-webkit-input-placeholder {
      line-height:1;
 }
 
@@ -70,7 +70,7 @@ input::-webkit-input-placeholder {
   margin-top: 20px;
 }
 
-input {
+.accountInputOne, .accountInputTwo {
   width: 100%;
   box-sizing: border-box;
   border-width: medium;
@@ -83,14 +83,14 @@ input {
   margin-bottom: 10px;
 }
 
-input::placeholder {
+.accountInputOne::placeholder, .accountInputTwo::placeholder {
   padding-top: 10px;
   padding-bottom: 10px;
   color: gray;
   font-size: 20px;
 }
 
-button {
+.accountButtonOne, .accountButton {
   width: 100px;
   height: 50px;
   background-color: white;

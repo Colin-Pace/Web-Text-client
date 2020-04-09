@@ -411,7 +411,7 @@ export default class TableTop extends React.Component {
     return (
 
       <div>
- 
+
         <div className = "tableTopNavbar">
 
           <button
@@ -458,6 +458,7 @@ export default class TableTop extends React.Component {
                 className = "folderNameInput"
                 aria-required="true"
                 aria-label="Folder name input"
+                autocomplete = "off"
 
               />
 

@@ -78,7 +78,12 @@ export default class Account extends React.Component {
 
               />
 
-              <button type = 'submit'>Enter</button>
+              <button
+
+                type = 'submit'
+                className = 'accountButtonOne'
+
+              >Enter</button>
 
             </div>
 

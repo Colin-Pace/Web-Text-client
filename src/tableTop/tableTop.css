@@ -110,6 +110,9 @@
 
 .folderNameInput {
   width: 50%;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 8px;
 }
 
 .sidebarInput {
@@ -144,6 +147,7 @@
   .logOutButton {
     margin-top: 20px;
     margin-left: 20px;
+    font-size: 18px;
   }
 
   .container {

@@ -1,15 +1,15 @@
-input:-webkit-autofill::first-line {
+.inputOne:-webkit-autofill::first-line, .inputTwo:-webkit-autofill::first-line {
   font-size: 20px
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active  {
+.inputOne:-webkit-autofill, .inputTwo:-webkit-autofill,
+.inputOne:-webkit-autofill:hover, .inputTwo:-webkit-autofill:hover,
+.inputOne:-webkit-autofill:focus,.inputTwo:-webkit-autofill:focus,
+.inputOne:-webkit-autofill:active, .inputTwo:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-input::-webkit-input-placeholder {
+.inputOne::-webkit-input-placeholder, .inputTwo::-webkit-input-placeholder {
      line-height:1;
 }
 
@@ -71,7 +71,7 @@ h1 {
   margin-top: 20px;
 }
 
-input {
+.inputOne, .inputTwo {
   width: 100%;
   box-sizing: border-box;
   border-width: medium;
@@ -84,14 +84,14 @@ input {
   margin-bottom: 10px;
 }
 
-input::placeholder {
+.inputOne::placeholder, .inputTwo::placeholder {
   padding-top: 10px;
   padding-bottom: 10px;
   color: gray;
   font-size: 20px;
 }
 
-button {
+.landingButton {
   width: 100px;
   height: 50px;
   background-color: white;

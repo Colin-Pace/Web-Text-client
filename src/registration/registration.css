@@ -1,15 +1,15 @@
-input:-webkit-autofill::first-line {
+.regInputOne:-webkit-autofill::first-line, .regInputTwo:-webkit-autofill::first-line {
   font-size: 20px
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active  {
+.regInputOne:-webkit-autofill, .regInputTwo:-webkit-autofill,
+.regInputOne:-webkit-autofill:hover, .regInputTwo:-webkit-autofill:hover,
+.regInputOne:-webkit-autofill:focus,.regInputTwo:-webkit-autofill:focus,
+.regInputOne:-webkit-autofill:active, .regInputTwo:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-input::-webkit-input-placeholder {
+.regInputOne::-webkit-input-placeholder, .regInputTwo::-webkit-input-placeholder {
      line-height:1;
 }
 

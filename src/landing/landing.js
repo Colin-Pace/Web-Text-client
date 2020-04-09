@@ -95,7 +95,12 @@ export default class Landing extends React.Component {
 
               />
 
-              <button type = 'submit'>Enter</button>
+              <button
+
+                type = 'submit'
+                className = 'landingButton'
+
+              >Enter</button>
 
             </div>
 
@@ -169,7 +174,12 @@ export default class Landing extends React.Component {
 
               <br/>
 
-              <button type = 'submit'>Enter</button>
+              <button
+
+                type = 'submit'
+                className = 'landingButton'
+
+              >Enter</button>
 
             </div>
 
