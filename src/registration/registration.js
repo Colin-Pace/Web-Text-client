@@ -27,53 +27,65 @@ export default class Registration extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
 
+    this.checkPassword = this.checkPassword.bind(this);
+
   }
 
-  handleChange(e) {
+  checkPassword(password) {
 
     const REGEX_LOWER =/(?=.*[a-z])[\S]+/;
 
-    const needsLower = "The password needs a lower case letter."
+    const needsLower = <p className = "passwordMessage">Needed: a lower case letter.</p>
 
     const REGEX_UPPER = /(?=.*[A-Z])[\S]+/;
 
-    const needsUpper = "The password needs an upper case letter."
+    const needsUpper = <p className = "passwordMessage">Needed: an upper case letter.</p>
 
     const REGEX_NUMBER = /(?=.*[0-9])[\S]+/;
 
-    const needsNumber = "The password needs a number."
+    const needsNumber = <p className = "passwordMessage">Needed: a number.</p>
 
     const REGEX_SPECIAL =/(?=.*[!@#\$%\^&])[\S]+/;
 
-    const needsSpecial = "The password needs a special character."
+    const needsSpecial = <p className = "passwordMessage">Needed: a special character.</p>
+
+    let tempMessage = [];
+
+    if (!REGEX_LOWER.test(password) && (!tempMessage.includes(needsLower))) {
+
+      tempMessage.push(needsLower);
+
+    }
+
+    if (!REGEX_UPPER.test(password) && (!tempMessage.includes(needsUpper))) {
+
+      tempMessage.push(needsUpper);
+
+    }
+
+    if (!REGEX_NUMBER.test(password) && (!tempMessage.includes(needsNumber))) {
+
+      tempMessage.push(needsNumber);
+
+    }
+
+    if (!REGEX_SPECIAL.test(password) && (!tempMessage.includes(needsSpecial))) {
+
+      tempMessage.push(needsSpecial);
+
+    }
+
+    return tempMessage;
+  }
+
+
+  handleChange(e) {
 
     this.setState( { value: e.target.value } );
 
-    console.log(this.state.value);
+    let message = this.checkPassword(e.target.value);
 
-    if (!REGEX_LOWER.test(this.state.value) && (!this.state.message.includes(needsLower))) {
-
-      this.state.message.push(needsLower);
-
-    }
-
-    if (!REGEX_UPPER.test(this.state.value) && (!this.state.message.includes(needsUpper))) {
-
-      this.state.message.push(needsUpper);
-
-    }
-
-    if (!REGEX_NUMBER.test(this.state.value) && (!this.state.message.includes(needsNumber))) {
-
-      this.state.message.push(needsNumber);
-
-    }
-
-    if (!REGEX_SPECIAL.test(this.state.value) && (!this.state.message.includes(needsSpecial))) {
-
-      this.state.message.push(needsSpecial);
-
-    }
+    this.setState( { message: message } );
 
   }
 
@@ -99,6 +111,18 @@ export default class Registration extends React.Component {
 
   render() {
 
+    const isValidPassword = this.state.message.length === 0;
+
+    const hasEnteredPassword = this.state.value.length > 0;
+
+    let inputBoxClass = undefined;
+
+    if (hasEnteredPassword) {
+
+      inputBoxClass = isValidPassword ? "greenInput" : "redInput";
+
+    }
+
     return (
 
       <div >
@@ -123,6 +147,7 @@ export default class Registration extends React.Component {
                 aria-required="true"
                 aria-label="User name for registration"
                 aria-describedby="registrationInstructions"
+                autocomplete = "off"
 
               />
 
@@ -131,12 +156,13 @@ export default class Registration extends React.Component {
                 type = "text"
                 placeholder = 'Password123!@#'
                 name = 'pwToAdd'
-                className = "regInputTwo"
+                className = { [ inputBoxClass, "regInputTwo" ].join(" ") }
                 aria-required="true"
                 aria-label="Password for registration"
                 aria-describedby="registrationInstructions"
                 value = { this.state.value }
                 onChange = { this.handleChange }
+                autocomplete = "off"
 
               />
 
@@ -161,7 +187,7 @@ export default class Registration extends React.Component {
 
         <div>
 
-          { this.state.message }
+          { isValidPassword ? "" : this.state.message }
 
         </div>
 

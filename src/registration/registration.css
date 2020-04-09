@@ -120,6 +120,24 @@ input:-webkit-autofill:active  {
     height: 80%;
   }
 
+  .redInput {
+    border: 2px solid rgb(255, 0, 0);
+    border-width: medium;
+  }
+
+  .greenInput {
+    background-color: rgb(124, 252, 0);
+    border: 2px solid rgb(124, 252, 0);
+    border-width: medium;
+  }
+
+  .passwordMessage {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 300px;
+    color: red;
+  }
+
   .regForm {
     display: flex;
     flex-direction: row;
