@@ -35,19 +35,19 @@ export default class Registration extends React.Component {
 
     const REGEX_LOWER =/(?=.*[a-z])[\S]+/;
 
-    const needsLower = <p className = "passwordMessage">Needed: a lower case letter.</p>
+    const needsLower = <p className = "passwordMessage">* Needed: a lower case letter.</p>
 
     const REGEX_UPPER = /(?=.*[A-Z])[\S]+/;
 
-    const needsUpper = <p className = "passwordMessage">Needed: an upper case letter.</p>
+    const needsUpper = <p className = "passwordMessage">* Needed: an upper case letter.</p>
 
     const REGEX_NUMBER = /(?=.*[0-9])[\S]+/;
 
-    const needsNumber = <p className = "passwordMessage">Needed: a number.</p>
+    const needsNumber = <p className = "passwordMessage">* Needed: a number.</p>
 
     const REGEX_SPECIAL =/(?=.*[!@#\$%\^&])[\S]+/;
 
-    const needsSpecial = <p className = "passwordMessage">Needed: a special character.</p>
+    const needsSpecial = <p className = "passwordMessage">* Needed: a special character.</p>
 
     let tempMessage = [];
 
@@ -111,7 +111,7 @@ export default class Registration extends React.Component {
 
   render() {
 
-    const isValidPassword = this.state.message.length === 0;
+    let isValidPassword = this.state.message.length === 0;
 
     const hasEnteredPassword = this.state.value.length > 0;
 
@@ -126,6 +126,12 @@ export default class Registration extends React.Component {
     return (
 
       <div >
+
+        <div className = "showMessage" >
+
+          { !hasEnteredPassword || isValidPassword ? "" : this.state.message }
+
+        </div>
 
         <div className = "regNavbar" >
 
@@ -170,7 +176,7 @@ export default class Registration extends React.Component {
 
             </div>
 
-        </form>
+          </form>
 
           <Link
 
@@ -182,12 +188,6 @@ export default class Registration extends React.Component {
             <span className = "landingLinkText">Login</span>
 
           </Link>
-
-        </div>
-
-        <div>
-
-          { isValidPassword ? "" : this.state.message }
 
         </div>
 
