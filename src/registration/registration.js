@@ -75,6 +75,12 @@ export default class Registration extends React.Component {
 
     }
 
+    if (password.length < 8) {
+
+      tempMessage.push(<p className = "passwordMessage">* Needed: at least eight characters.</p>)
+
+    }
+
     return tempMessage;
   }
 

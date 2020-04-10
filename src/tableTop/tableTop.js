@@ -451,7 +451,7 @@ export default class TableTop extends React.Component {
               className = "sidebarInput"
 
             >
-
+ 
               <input
 
                 type = "text"

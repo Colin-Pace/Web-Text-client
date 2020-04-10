@@ -9,8 +9,8 @@
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-.accountInputOne::-webkit-input-placeholder, .accountInputTwo::-webkit-input-placeholder {
-     line-height:1;
+.accountInputOne::placeholder, .accountInputTwo::placeholder {
+  line-height:normal;
 }
 
 .nonMobileAccountFormOne {

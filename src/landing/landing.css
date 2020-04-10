@@ -9,8 +9,8 @@
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-.inputOne::-webkit-input-placeholder, .inputTwo::-webkit-input-placeholder {
-     line-height:1;
+.inputOne::placeholder, .inputTwo::placeholder {
+     line-height: normal;
 }
 
 .nonMobileForm {

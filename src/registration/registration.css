@@ -9,8 +9,8 @@
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-.regInputOne::-webkit-input-placeholder, .regInputTwo::-webkit-input-placeholder {
-     line-height:1;
+.regInputOne::placeholder, .regInputTwo::placeholder {
+  ine-height: normal;
 }
 
 .regNonMobileForm {
@@ -90,11 +90,15 @@
   margin-bottom: 20px;
 }
 
-.regInputOne::placeholder, .regInputTwo::placeholder {
+.regInputTwo::placeholder {
   padding-top: 10px;
   padding-bottom: 10px;
   color: gray;
   font-size: 20px;
+}
+
+.regInputOne:focus, .regInputTwo:focus {
+  outline: none;
 }
 
 .regButton {
@@ -131,12 +135,10 @@
 
   .redInput {
     border: 2px solid rgb(255, 0, 0);
-    border-width: medium;
   }
 
   .greenInput {
     border: 2px solid rgb(124, 252, 0);
-    border-width: medium;
   }
 
   .passwordMessage {
