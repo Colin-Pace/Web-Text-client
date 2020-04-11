@@ -153,7 +153,7 @@ export default class Registration extends React.Component {
                 aria-required="true"
                 aria-label="User name for registration"
                 aria-describedby="registrationInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 
@@ -168,7 +168,7 @@ export default class Registration extends React.Component {
                 aria-describedby="registrationInstructions"
                 value = { this.state.value }
                 onChange = { this.handleChange }
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 
@@ -190,7 +190,7 @@ export default class Registration extends React.Component {
 
           >
 
-            <span className = "landingLinkText">Login</span>
+            <div className = "landingLinkText">Login</div>
 
           </Link>
 
@@ -226,7 +226,7 @@ export default class Registration extends React.Component {
                 aria-required="true"
                 aria-label="User name for mobile registration"
                 aria-describedby="registrationInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 
@@ -239,7 +239,7 @@ export default class Registration extends React.Component {
                 aria-required="true"
                 aria-label="Password for mobile registration"
                 aria-describedby="registrationInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 

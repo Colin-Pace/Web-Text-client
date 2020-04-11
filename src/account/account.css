@@ -20,13 +20,16 @@
 
 .tableTopLinkText {
   color: white;
-  font-size: 30px;
-  margin-left: 30px;
+  font-size: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  float: right;
 }
 
 .tableTopLink {
   text-decoration: none;
+  background-color: teal;
 }
 
 .tableTopLink:visited {

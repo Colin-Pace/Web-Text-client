@@ -61,7 +61,7 @@ export default class Account extends React.Component {
                 aria-required="true"
                 aria-label="User name for account deletion"
                 aria-describedby="accountInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 
@@ -74,7 +74,7 @@ export default class Account extends React.Component {
                 aria-required="true"
                 aria-label="Password for account deletion"
                 aria-describedby="accountInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 
@@ -91,7 +91,7 @@ export default class Account extends React.Component {
 
           <Link to = '/tableTop' className = "tableTopLink" >
 
-            <span className = "tableTopLinkText">Table Top</span>
+            <div className = "tableTopLinkText">Table Top</div>
 
           </Link>
 
@@ -126,7 +126,7 @@ export default class Account extends React.Component {
                 aria-required="true"
                 aria-label="User name for mobile account deletion"
                 aria-describedby="accountInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 
@@ -139,7 +139,7 @@ export default class Account extends React.Component {
                 aria-required="true"
                 aria-label="Password for mobile account deletion"
                 aria-describedby="accountInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 

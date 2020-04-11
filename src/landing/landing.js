@@ -78,7 +78,7 @@ export default class Landing extends React.Component {
                 aria-required="true"
                 aria-label="User name for login"
                 aria-describedby="landingInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 
@@ -91,7 +91,7 @@ export default class Landing extends React.Component {
                 aria-required="true"
                 aria-label="Password for login"
                 aria-describedby="landingInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 
@@ -113,7 +113,7 @@ export default class Landing extends React.Component {
 
           >
 
-            <span className = "regText">Registration</span>
+            <div className = "regText">Registration</div>
 
           </Link>
 
@@ -155,7 +155,7 @@ export default class Landing extends React.Component {
                 aria-required="true"
                 aria-label="User name for mobile login"
                 aria-describedby="landingInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 
@@ -168,7 +168,7 @@ export default class Landing extends React.Component {
                 aria-required="true"
                 aria-label="Password for mobile login"
                 aria-describedby="landingInstructions"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 

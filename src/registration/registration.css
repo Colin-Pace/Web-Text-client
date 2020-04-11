@@ -25,13 +25,14 @@
 
 .landingLinkText {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
 }
 
 .landingLink {
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
-  margin-right: 30px;
 }
 
 .landingLink:hover {
