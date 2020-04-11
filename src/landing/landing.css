@@ -73,7 +73,7 @@ h1 {
 }
 
 .inputOne, .inputTwo {
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
   border-width: 1px;
   border-color: black;
@@ -127,6 +127,7 @@ h1 {
 
   .inputOne, .inputTwo {
     height: 80%;
+    width: 100%;
   }
 
   .form {
