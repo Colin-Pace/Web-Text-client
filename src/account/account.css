@@ -29,7 +29,6 @@
 
 .tableTopLink {
   text-decoration: none;
-  background-color: teal;
 }
 
 .tableTopLink:visited {
@@ -117,6 +116,16 @@
     height: 80px;
   }
 
+  .tableTopLinkText {
+    font-size: 30px;
+    padding-top: 30px;
+    padding-right: 20px;
+  }
+
+  .tableTopLink {
+    text-decoration: none;
+  }
+
   .accountInputOne, .accountInputTwo {
     height: 80%;
   }
@@ -126,13 +135,6 @@
     flex-direction: row;
     margin-left: 20px;
     margin-top: 20px;
-  }
-
-  .tableTopLink {
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: 20px;
-    margin-top: 30px;
   }
 
   .accountHeading {
