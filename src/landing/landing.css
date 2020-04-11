@@ -86,8 +86,6 @@ h1 {
 }
 
 .inputOne::placeholder, .inputTwo::placeholder {
-  padding-top: 10px;
-  padding-bottom: 10px;
   color: gray;
   font-size: 20px;
 }

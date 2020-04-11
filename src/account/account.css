@@ -9,10 +9,6 @@
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-.accountInputOne::placeholder, .accountInputTwo::placeholder {
-  line-height:normal;
-}
-
 .nonMobileAccountFormOne {
   display: none;
 }
@@ -85,8 +81,6 @@
 }
 
 .accountInputOne::placeholder, .accountInputTwo::placeholder {
-  padding-top: 10px;
-  padding-bottom: 10px;
   color: gray;
   font-size: 20px;
 }

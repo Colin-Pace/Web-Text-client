@@ -9,10 +9,6 @@
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-.regInputOne::placeholder, .regInputTwo::placeholder {
-  ine-height: normal;
-}
-
 .regNonMobileForm {
   display: none;
 }
@@ -91,8 +87,6 @@
 }
 
 .regInputTwo::placeholder {
-  padding-top: 10px;
-  padding-bottom: 10px;
   color: gray;
   font-size: 20px;
 }
