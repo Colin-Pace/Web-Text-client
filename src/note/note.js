@@ -60,7 +60,7 @@ export default class Note extends React.Component {
               className = "noteTitle"
               aria-required="true"
               aria-label="Post name input"
-              autocomplete = "off"
+              autoComplete = "off"
 
             / >
 
@@ -68,7 +68,7 @@ export default class Note extends React.Component {
 
                 name = "noteText"
                 placeholder = 'Enter note text here'
-                autocomplete = "off"
+                autoComplete = "off"
                 className = "noteText"
 
             >

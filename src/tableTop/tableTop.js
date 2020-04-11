@@ -172,7 +172,7 @@ export default class TableTop extends React.Component {
                       className = "postNameLink"
                       aria-required = "true"
                       aria-label = "Edit post name"
-                      autocomplete = "off"
+                      autoComplete = "off"
 
                     / >
 
@@ -460,7 +460,7 @@ export default class TableTop extends React.Component {
                 className = "folderNameInput"
                 aria-required = "true"
                 aria-label = "Folder name input"
-                autocomplete = "off"
+                autoComplete = "off"
 
               />
 
