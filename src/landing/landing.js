@@ -128,7 +128,7 @@ export default class Landing extends React.Component {
             className = "instructions"
             id = "landingInstructions"
 
-          >Application instructions: If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make posts for them, select posts, and enter post text. If you do not have an account, go to registration to create one. For a demonstration, try the user name "User Name" with the password "Password123!".</p>
+          >Application instructions: If you have an account, please enter your name and password to go to the table top. There you can enter the name of a folder, select created folders and make posts for them, select posts, and enter post text. If you do not have an account, go to registration to create one. For a login demonstration, the user name "User Name" and password "Password123!" have already been registered.</p>
 
           <div
 
